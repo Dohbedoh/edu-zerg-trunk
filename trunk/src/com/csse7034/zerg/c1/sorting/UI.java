@@ -2,7 +2,7 @@ package com.csse7034.zerg.c1.sorting;
 import java.util.Scanner;
 
 public class UI {
-	public static void main() {
+	public static void main(String[] args) {
 		Graph graph = new Graph();
 		
 		Scanner sc = new Scanner(System.in);
@@ -11,10 +11,10 @@ public class UI {
 		
 		Parser p = new Parser();
 		
-		if (p.Parse(graph, fName) == "ok") {
+		if (Parser.parse(graph, fName) == "ok") {
 			//Do sorting
 		} else {
-			System.out.println(p.Parse(graph, fName));
+			System.out.println(Parser.parse(graph, fName));
 		}
 		
 	}

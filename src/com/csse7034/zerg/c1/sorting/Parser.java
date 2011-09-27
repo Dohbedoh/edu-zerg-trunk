@@ -34,8 +34,7 @@ public class Parser {
 				
 				// check if the value name is valid
 				if (parentAndChild[0].matches(CharFromSet)) {
-					//graph.addNode(parentAndChild[0]);
-					matrix.put(parentAndChild[0]+","+parentAndChild[0], 0);
+					graph.addNode(parentAndChild[0]);
 					
 				} else {
 					// 02: Incorrect value exception, produced when parsing 
@@ -50,8 +49,15 @@ public class Parser {
 					
 					// check if the value name is valid
 					if (allTheChildren[i].matches(CharFromSet)) {
-						//graph.addNode(allTheChildren[i]);
-						matrix.put(parentAndChild[0]+","+allTheChildren[i], 1);
+						graph.addNode(allTheChildren[i]);
+						String err = graph.addEdge(parentAndChild[0], allTheChildren[i]);
+						
+						if (!err.equals("ok")) {
+							// 02: Incorrect value exception, produced when parsing 
+							// and finding characters other than the ones in the specification
+							return 2;
+						}
+						
 					} else {
 						// 02: Incorrect value exception, produced when parsing 
 						// and finding characters other than the ones in the specification

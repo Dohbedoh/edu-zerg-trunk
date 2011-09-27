@@ -196,7 +196,7 @@ public class Graph implements GraphI{
 
 			int levelDest = findLevel(indDest);
 			nodes[indDest].setLevel(levelDest);
-			adjustLevel(indDest,levelDest);
+			adjustLevelFrom(indDest,levelDest);
 			
 			
 			edges[indSrc][indDest] = 1;
@@ -205,7 +205,6 @@ public class Graph implements GraphI{
 		}else{
 			return ("Error Code 3: Cyclic");
 		}
-		return null;
 	}
 
 

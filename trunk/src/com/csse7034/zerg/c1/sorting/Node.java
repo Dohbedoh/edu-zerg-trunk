@@ -1,11 +1,11 @@
 package com.csse7034.zerg.c1.sorting;
 
-public class Node {
+public class Node implements NodeI{
 	private String name;
 	private int level;
 	
-	public Node(){
-		name = "";
+	public Node(String name){
+		name = name;
 		level = -1;	
 	}
 	

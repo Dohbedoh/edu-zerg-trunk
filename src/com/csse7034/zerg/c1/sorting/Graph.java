@@ -201,7 +201,7 @@ public class Graph implements GraphI{
 			
 			edges[indSrc][indDest] = 1;
 			edges[indDest][indSrc] = -1;
-			return ("!01");
+			return ("ok");
 		}else{
 			return ("Error Code 3: Cyclic");
 		}

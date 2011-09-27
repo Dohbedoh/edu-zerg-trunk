@@ -31,7 +31,7 @@ public class Graph implements GraphI{
 		edges = new int [50][50];
 		for(int i=0; i<edges.length; i++)
 		{
-			for(int j=0; i<edges[i].length;i++)
+			for(int j=0; j<edges[i].length;j++)
 			{
 				edges[i][j] = 0;
 			}
@@ -53,7 +53,7 @@ public class Graph implements GraphI{
 				max = Math.max(max, nodes[i].getLevel());
 			}
 		}
-		return max;
+		return max+1;
 	}
 	
 	/**
@@ -68,7 +68,7 @@ public class Graph implements GraphI{
 		{
 			if(edges[node][i]==1)
 			{
-				if(nodes[node].getLevel()<nodes[i].getLevel())
+				if(nodes[node].getLevel()>nodes[i].getLevel())
 				{
 					int newLevel = findLevel(i);
 					nodes[i].setLevel(newLevel);
@@ -118,7 +118,7 @@ public class Graph implements GraphI{
 	 */
 	private boolean visit(int node)
 	{
-		visited[node] = false;
+		visited[node] = true;
 		for(int i=0; i<size; i++)
 		{
 			if(edges[node][i]==1)
@@ -151,7 +151,7 @@ public class Graph implements GraphI{
 		}
 		for(int i=size; i<edges.length; i++)
 		{
-			for(int j=size; i<edges[i].length;i++)
+			for(int j=size; j<edges[i].length;j++)
 			{
 				edges[i][j] = 0;
 			}
@@ -162,7 +162,7 @@ public class Graph implements GraphI{
 
 	@Override
 	public void addNode(String name) {
-		if(size<nodes.length)
+		if(size==nodes.length)
 		{
 			resize(); 
 		}
@@ -176,7 +176,7 @@ public class Graph implements GraphI{
 		if(src!=dest)
 		{
 			int indSrc=-1, indDest=-1, i=0;
-			while(i<size && indSrc == -1 && indDest == -1)
+			while(i<size || (indSrc == -1 && indDest == -1))
 			{
 				if(nodes[i].getName().equals(src))
 				{
@@ -187,6 +187,7 @@ public class Graph implements GraphI{
 						indDest = i;
 					}
 				}
+				i++;
 			}
 			
 			if(edges[indSrc][indDest] == -1 || containsCycle(indDest, indSrc))
@@ -197,7 +198,6 @@ public class Graph implements GraphI{
 			int levelDest = findLevel(indDest);
 			nodes[indDest].setLevel(levelDest);
 			adjustLevelFrom(indDest,levelDest);
-			
 			
 			edges[indSrc][indDest] = 1;
 			edges[indDest][indSrc] = -1;
@@ -221,15 +221,20 @@ public class Graph implements GraphI{
 
 	@Override
 	public NodeI[] getNodesAtLevel(int level) {
-		Vector<NodeI> res = new Vector<NodeI>();
+		Vector<NodeI> temp = new Vector<NodeI>();
 		for(int i=0; i<size; i++)
 		{
 			if(nodes[i].getLevel()==level)
 			{
-				res.add(nodes[i]);
+				temp.add(nodes[i]);
 			}
 		}
-		return (NodeI[])res.toArray();
+		NodeI [] res = new NodeI [temp.size()];
+		for(int i=0; i<temp.size(); i++)
+		{
+			res[i]=temp.get(i);
+		}
+		return res;
 	}
 
 
@@ -262,11 +267,12 @@ public class Graph implements GraphI{
 		for(int i=0; i<size; i++)
 		{	
 			buffer.append(nodes[i].getName() + ": ");
-			for(int j=0; i<size; j++)
+			for(int j=0; j<size; j++)
 			{
 				if(edges[i][j]==1)
 				{
 					buffer.append(nodes[j].getName());
+					buffer.append("("+(nodes[j].getLevel())+")");
 				}
 			}
 			buffer.append("\n");

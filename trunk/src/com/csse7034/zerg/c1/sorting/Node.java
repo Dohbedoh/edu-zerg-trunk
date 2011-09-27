@@ -5,8 +5,8 @@ public class Node implements NodeI{
 	private int level;
 	
 	public Node(String name){
-		name = name;
-		level = -1;	
+		this.name = name;
+		level = 0;	
 	}
 	
 	public String getName() {

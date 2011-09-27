@@ -5,19 +5,15 @@ import java.util.*;
 
 public class Parser {
 
-	private static Hashtable<String, Integer> matrix = null;
-	ArrayList<ArrayList<Integer>> test = null;
+	static Graph graph = null;
 	
-	public Parser() {
-		matrix = new Hashtable<String, Integer>();
-		
+	public Parser(Graph g, String filePath) {
+		graph = g;
 	}
 	
-	public static int parse() {
+	public static String parse() {
 		
 		String CharFromSet = "A-Za-z0-9-+@#$%^&*|<>?";
-		
-		Graph graph = new Graph();
 		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(new File("FilePath")));
@@ -43,7 +39,7 @@ public class Parser {
 				} else {
 					// 02: Incorrect value exception, produced when parsing 
 					// and finding characters other than the ones in the specification
-					return 2;
+					return "Error 02: Incorrect value exception";
 				}
 				
 				// get the rest of the value name
@@ -64,13 +60,13 @@ public class Parser {
 						if (!err.equals("ok")) {
 							// 02: Incorrect value exception, produced when parsing 
 							// and finding characters other than the ones in the specification
-							return 2;
+							return "Error 02: Incorrect value exception";
 						}
 						
 					} else {
 						// 02: Incorrect value exception, produced when parsing 
 						// and finding characters other than the ones in the specification
-						return 2;
+						return "Error 02: Incorrect value exception";
 					}
 				}
 				
@@ -80,7 +76,7 @@ public class Parser {
 			
 		}
 		
-		return -1;
+		return "ok";
 	}
 	
 }

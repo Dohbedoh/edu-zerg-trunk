@@ -34,7 +34,11 @@ public class Parser {
 				
 				// check if the value name is valid
 				if (parentAndChild[0].matches(CharFromSet)) {
-					graph.addNode(parentAndChild[0]);
+					
+					// check if the node has already been added into the graph
+					if (!graph.contains(parentAndChild[0])) {
+						graph.addNode(parentAndChild[0]);
+					}
 					
 				} else {
 					// 02: Incorrect value exception, produced when parsing 
@@ -49,7 +53,12 @@ public class Parser {
 					
 					// check if the value name is valid
 					if (allTheChildren[i].matches(CharFromSet)) {
-						graph.addNode(allTheChildren[i]);
+						
+						// check if the node has already been added into the graph
+						if (!graph.contains(parentAndChild[0])) {
+							graph.addNode(allTheChildren[i]);
+						}
+						
 						String err = graph.addEdge(parentAndChild[0], allTheChildren[i]);
 						
 						if (!err.equals("ok")) {

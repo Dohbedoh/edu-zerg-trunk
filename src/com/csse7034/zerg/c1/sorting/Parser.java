@@ -7,16 +7,17 @@ public class Parser {
 
 	static Graph graph = null;
 	
-	public Parser(Graph g, String filePath) {
-		graph = g;
+	public Parser() {
 	}
 	
-	public static String parse() {
+	public static String parse(Graph g, String filePath) {
+		
+		graph = g;
 		
 		String CharFromSet = "A-Za-z0-9-+@#$%^&*|<>?";
 		
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("FilePath")));
+			BufferedReader br = new BufferedReader(new FileReader(new File(filePath)));
 			
 			String line = "";
 			String parentAndChild[];

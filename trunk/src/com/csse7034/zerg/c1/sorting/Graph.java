@@ -92,7 +92,7 @@ public class Graph implements GraphI{
 	 */
 	private boolean containsCycle(int src, int dest)
 	{
-		boolean[] visited = new boolean[size];
+		visited = new boolean[size];
 		for (int i = 0; i < size; i++) {
 			visited[i] = false;
 		}
@@ -192,7 +192,8 @@ public class Graph implements GraphI{
 			
 			if(edges[indSrc][indDest] == -1 || containsCycle(indDest, indSrc))
 			{
-				return ("Error Code 3: Cyclic");
+				//return ("Error Code 3: Cyclic");
+				return("!03");
 			}
 
 			int levelDest = findLevel(indDest);
@@ -203,7 +204,8 @@ public class Graph implements GraphI{
 			edges[indDest][indSrc] = -1;
 			return ("ok");
 		}else{
-			return ("Error Code 3: Cyclic");
+			//return ("Error Code 3: Cyclic");
+			return("!03");
 		}
 	}
 

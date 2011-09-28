@@ -10,9 +10,11 @@ public class UI {
 		String fName = sc.nextLine();
 		
 		Parser p = new Parser();
+		Sorter s = new Sorter();
 		
 		if (Parser.parse(graph, fName) == "ok") {
-			//Do sorting
+			String result = s.sort(graph);
+			System.out.println(result);
 		} else {
 			System.out.println(Parser.parse(graph, fName));
 		}

@@ -10,6 +10,7 @@ package com.csse7034.zerg.c1.sorting;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.Scanner;
 
 public class UI {
@@ -44,14 +45,17 @@ public class UI {
 		
 		System.out.println(result);
 		
-		try { 
-			FileWriter outFile = new FileWriter("output.txt", false); 
-			PrintWriter out = new PrintWriter(outFile);
-			out.write(result);
-			out.close(); 
+		if(result.startsWith("Error"))
+		{
+			try { 
+				FileWriter outFile = new FileWriter("errlog.txt", false); 
+				PrintWriter out = new PrintWriter(outFile);
+				out.write(result);
+				out.close(); 
 			} catch (IOException e) { 
-				System.out.println("Error !04: Result couldn't be output to text file");
-			} 	
+				System.out.println("Error !04: Error couldn't be output to text file");
+			} 
+		}
 		
 	}
 }

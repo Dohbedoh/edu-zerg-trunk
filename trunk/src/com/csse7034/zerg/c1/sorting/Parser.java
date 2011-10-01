@@ -77,7 +77,7 @@ public class Parser {
 							// 02: Incorrect value exception, produced when parsing 
 							// and finding characters other than the ones in the specification
 //System.out.println("Failed Here 2");
-							return "!02";
+							return "!03";
 						}
 						
 					} else {

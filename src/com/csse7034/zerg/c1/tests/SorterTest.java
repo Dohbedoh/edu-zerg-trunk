@@ -1,14 +1,100 @@
+/**
+ * Class Sorter Unit Test: class designed to test the methods within the Sorter class
+ * 
+ * 1 test is performed, which test cases specified on each test header
+ * 
+ * @author Pablo MINO
+ */
+
 package com.csse7034.zerg.c1.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.csse7034.zerg.c1.sorting.Graph;
+import com.csse7034.zerg.c1.sorting.Sorter;
+
 public class SorterTest {
 
+	/** Instance of graph for testing purposes */
+	Graph testGraph = new Graph();
+	
+	/**
+	 * Loads test values for the graph to be used in all tests
+	 * At this point it is assumed the passed graph is entirely valid
+	 * 
+	 * The following test case will be used
+	 * 
+	 * Assume a graph with the following structure
+	 * A: B
+	 * B: C
+	 * C: D
+	 * D: E, F, H
+	 * F: H, I, W
+	 * H: I, J
+	 * J: K, L
+	 * L: M, N
+	 * N: Q
+	 * Q: W, X, Y
+	 * Y: Z
+	 */
+	void initializeTest(){
+	
+	// Add node check, should not return errors
+			testGraph.addNode("A");
+			testGraph.addNode("B");
+			testGraph.addNode("C");
+			testGraph.addNode("D");
+			testGraph.addNode("E");
+			testGraph.addNode("F");
+			testGraph.addNode("H");
+			testGraph.addNode("I");
+			testGraph.addNode("J");
+			testGraph.addNode("K");
+			testGraph.addNode("L");
+			testGraph.addNode("M");
+			testGraph.addNode("N");
+			testGraph.addNode("Q");
+			testGraph.addNode("W");
+			testGraph.addNode("X");
+			testGraph.addNode("Y");
+			testGraph.addNode("Z");
+			
+			// Add edge check, should return no error
+			testGraph.addEdge("A", "B");
+			testGraph.addEdge("B", "C");
+			testGraph.addEdge("C", "D");
+			testGraph.addEdge("D", "E");
+			testGraph.addEdge("D", "F");
+			testGraph.addEdge("D", "H");
+			testGraph.addEdge("H", "I");
+			testGraph.addEdge("F", "H");
+			testGraph.addEdge("F", "I");
+			testGraph.addEdge("F", "W");
+			testGraph.addEdge("H", "J");
+			testGraph.addEdge("J", "K");
+			testGraph.addEdge("J", "L");
+			testGraph.addEdge("D", "Z");
+			testGraph.addEdge("L", "M");
+			testGraph.addEdge("L", "N");
+			testGraph.addEdge("N", "Q");
+			testGraph.addEdge("Q", "W");
+			testGraph.addEdge("Q", "X");
+			testGraph.addEdge("Q", "Y");
+			testGraph.addEdge("Y", "Z");
+	}
+	
+	/**
+	 * Sorting test:	 
+	 * 
+	 * Tests the sort method, it should pass the result
+	 * from the Graph class
+	 * 
+	 */
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void sorting() {
+		assertEquals(Sorter.sort(testGraph).equals(""), false);
 	}
 
 }

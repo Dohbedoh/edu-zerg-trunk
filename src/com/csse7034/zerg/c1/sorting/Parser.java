@@ -1,3 +1,10 @@
+/**
+ * Class Parser: Parses the input file from the user and translates the data in it 
+ * to a graph with nodes
+ * 
+ * @author Koh Thong Guan
+ */
+
 package com.csse7034.zerg.c1.sorting;
 
 import java.io.*;
@@ -10,12 +17,18 @@ public class Parser {
 	public Parser() {
 	}
 	
+	/**
+	 * Parse the data in the input text file with its file path and translates the data into nodes 
+	 * to fill the graph.
+	 * @param g	The created empty Graph object
+	 * @param filePath	The file path of the 
+	 * @return
+	 */
 	public static String parse(Graph g, String filePath) {
 		
 		graph = g;
 		
 		String CharFromSet = "[[A-Za-z0-9]|[-\\+@#\\$%\\^&\\*|<>\\?]]*";
-		// String CharFromSet = "[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789][-+@#$%^&*|<>?]";
 		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(new File(filePath)));
@@ -36,33 +49,26 @@ public class Parser {
 					// check if the node has already been added into the graph
 					if (!graph.contains(parentAndChild[0])) {
 						graph.addNode(parentAndChild[0]);
-						System.out.println(" call");
-					} else {
-						System.out.println(" call");
-					}
+					} 
 					
 				} else {
 					// 02: Incorrect value exception, produced when parsing 
 					// and finding characters other than the ones in the specification
-					System.out.println("Failed Here 1 , " + parentAndChild[0]);
-					return "Error 02: Incorrect value exception";
+					//System.out.println("Failed Here 1 , " + parentAndChild[0]);
+					return "!02";
 				}
 				
 				// get the rest of the value name
 				allTheChildren = parentAndChild[1].split(",");
-				System.out.println("what's here , " + allTheChildren.length);
+				//System.out.println("what's here , " + allTheChildren.length);
 				for (int i = 0; i < allTheChildren.length; i++) {
 					allTheChildren[i] = allTheChildren[i].trim();
 					
 					// check if the value name is valid
 					if (allTheChildren[i].matches(CharFromSet)) {
-						//graph.addNode(allTheChildren[i]);
 						// check if the node has already been added into the graph
 						if (!graph.contains(allTheChildren[i])) {
 							graph.addNode(allTheChildren[i]);
-							System.out.println(" call2");
-						} else {
-							System.out.println("doesnt call2");
 						}
 						
 						String err = graph.addEdge(parentAndChild[0], allTheChildren[i]);
@@ -70,24 +76,24 @@ public class Parser {
 						if (!err.equals("ok")) {
 							// 02: Incorrect value exception, produced when parsing 
 							// and finding characters other than the ones in the specification
-							System.out.println("Failed Here 2");
-							return "Error 02: Incorrect value exception";
+//System.out.println("Failed Here 2");
+							return "!02";
 						}
 						
 					} else {
 						// 02: Incorrect value exception, produced when parsing 
 						// and finding characters other than the ones in the specification
-						System.out.println("Failed Here 3");
-						return "Error 02: Incorrect value exception";
+//System.out.println("Failed Here 3");
+						return "!02";
 					}
 				}
 				
 			}
 			
 		} catch (Exception ex) {
-			System.out.println(ex.getStackTrace());
-			ex.printStackTrace();
-			return "Error 01: No File";
+//System.out.println(ex.getStackTrace());
+//ex.printStackTrace();
+			return "!01";
 		}
 		
 		return "ok";

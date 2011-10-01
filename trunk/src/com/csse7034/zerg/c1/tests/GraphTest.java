@@ -162,25 +162,35 @@ public class GraphTest {
 		
 		// Add edge check, should return no error
 		testGraph.addEdge("A", "B");
+		
 		testGraph.addEdge("B", "C");
+		
 		testGraph.addEdge("C", "D");
+		
 		testGraph.addEdge("D", "E");
 		testGraph.addEdge("D", "F");
 		testGraph.addEdge("D", "H");
-		testGraph.addEdge("H", "I");
-		testGraph.addEdge("F", "H");
+		testGraph.addEdge("D", "Z");
+		
 		testGraph.addEdge("F", "I");
 		testGraph.addEdge("F", "W");
+		testGraph.addEdge("F", "H");
+		
+		testGraph.addEdge("H", "I");
 		testGraph.addEdge("H", "J");
+		
 		testGraph.addEdge("J", "K");
 		testGraph.addEdge("J", "L");
-		testGraph.addEdge("D", "Z");
+		
 		testGraph.addEdge("L", "M");
 		testGraph.addEdge("L", "N");
+		
 		testGraph.addEdge("N", "Q");
+		
 		testGraph.addEdge("Q", "W");
 		testGraph.addEdge("Q", "X");
 		testGraph.addEdge("Q", "Y");
+		
 		testGraph.addEdge("Y", "Z");		
 		//assertEquals("!03", testGraph.addEdge("Z", "D"));
 	

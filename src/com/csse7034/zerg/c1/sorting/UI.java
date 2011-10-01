@@ -33,21 +33,25 @@ public class UI {
 		
 		/** Error interpretation */
 		if (result.equals("!01")){
-			System.out.println("Error !01: File was not found on the specified location");
+			result = "Error !01: File was not found on the specified location";
 		} else if (result.equals("!02")){
-			System.out.println("Error !02: A line in the input file does not obey the specified format");
+			result= "Error !02: A line in the input file does not obey the specified format";
 		} else if (result.equals("!03")){
-			System.out.println("Error !03: The suggested finite partial order contains a cyclic reference");
+			result = "Error !03: The suggested finite partial order contains a cyclic reference";
 		} else {
-			try { 
-				FileWriter outFile = new FileWriter("output.txt", false); 
-				PrintWriter out = new PrintWriter(outFile);
-				out.write(Sorter.sort(graph));
-				out.close(); 
-				} catch (IOException e) { 
-					System.out.println("Error !04: Result couldn't be output to text file");
-				} 		
+			result = Sorter.sort(graph);
 		}
+		
+		System.out.println(result);
+		
+		try { 
+			FileWriter outFile = new FileWriter("output.txt", false); 
+			PrintWriter out = new PrintWriter(outFile);
+			out.write(result);
+			out.close(); 
+			} catch (IOException e) { 
+				System.out.println("Error !04: Result couldn't be output to text file");
+			} 	
 		
 	}
 }

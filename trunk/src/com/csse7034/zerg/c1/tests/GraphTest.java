@@ -97,7 +97,7 @@ public class GraphTest {
 	 * 
 	 */
 	@Test
-	public void AcyclicError() {
+	public void acyclicError() {
 		
 		testGraph = new Graph();
 		
@@ -136,7 +136,7 @@ public class GraphTest {
 	 * 
 	 */
 	@Test
-	public void FullSizeTest() {
+	public void fullSizeTest() {
 		
 		testGraph = new Graph();
 		
@@ -192,29 +192,10 @@ public class GraphTest {
 		testGraph.addEdge("Q", "Y");
 		
 		testGraph.addEdge("Y", "Z");		
-		//assertEquals("!03", testGraph.addEdge("Z", "D"));
 	
 		// toString() check, should return a representation of the nodes
-		// and its child, according to documentation:
-		// A: B(1)
-		// B: C(1)
-		// C: D(1)
-		// D: E(2)F(2)H(2)Z(8)
-		// E: 
-		// F: H(2) I(3) W(7)
-		// G: 
-		// H: I(3)J(3)
-		// I: 
-		// J: K(4)L(4)
-		// K: 
-		// L: M(5)N(5)
-		// M: 
-		// N: Q(6)
-		// Q: W(7) X(7) Y(7)
-		// W: 
-		// X: 
-		// Y: Z(8)
-		// Z: 
+		// and its child, according to documentation
+		//
 		System.out.println(testGraph.toString());
 		
 	}

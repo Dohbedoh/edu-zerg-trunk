@@ -39,6 +39,10 @@ public class Parser {
 			
 			while ((line = br.readLine()) != null) {
 				
+				if (!line.matches("[:]*")) {
+					return "!02";
+				}
+				
 				// get the first value name
 				parentAndChild = line.split(":");
 				parentAndChild[0] = parentAndChild[0].trim();
@@ -92,7 +96,7 @@ public class Parser {
 			
 		} catch (Exception ex) {
 //System.out.println(ex.getStackTrace());
-//ex.printStackTrace();
+ex.printStackTrace();
 			return "!01";
 		}
 		

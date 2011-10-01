@@ -45,7 +45,7 @@ public class Graph implements GraphI{
 	 */
 	private int findLevel(int node)
 	{
-		int max = nodes[node].getLevel();
+		int max = 0;
 		for(int i=0; i<size; i++)
 		{
 			if(edges[i][node]==1)
@@ -127,7 +127,10 @@ public class Graph implements GraphI{
 				{
 					return true;
 				}else{
-					return visit(i);
+					if(visit(i))
+					{
+						return true;
+					}
 				}
 			}
 		}
@@ -189,22 +192,26 @@ public class Graph implements GraphI{
 				}
 				i++;
 			}
-			
-			if(edges[indSrc][indDest] == -1 || containsCycle(indDest, indSrc))
+
+			if(edges[indSrc][indDest] == -1)
 			{
-				//return ("Error Code 3: Cyclic");
 				return("!03");
 			}
 
+			edges[indSrc][indDest] = 1;
+			edges[indDest][indSrc] = -1;
+			
+			if(containsCycle(indDest, indSrc))
+			{
+				return("!03");
+			}
+			
 			int levelDest = findLevel(indDest);
 			nodes[indDest].setLevel(levelDest);
 			adjustLevelFrom(indDest,levelDest);
 			
-			edges[indSrc][indDest] = 1;
-			edges[indDest][indSrc] = -1;
 			return ("ok");
 		}else{
-			//return ("Error Code 3: Cyclic");
 			return("!03");
 		}
 	}
@@ -268,13 +275,12 @@ public class Graph implements GraphI{
 		StringBuffer buffer = new StringBuffer("Graph Representation:\n\n");
 		for(int i=0; i<size; i++)
 		{	
-			buffer.append(nodes[i].getName() + ": ");
+			buffer.append(nodes[i].getName() + "("+(nodes[i].getLevel())+"): ");
 			for(int j=0; j<size; j++)
 			{
 				if(edges[i][j]==1)
 				{
 					buffer.append(nodes[j].getName());
-					buffer.append("("+(nodes[j].getLevel())+")");
 				}
 			}
 			buffer.append("\n");

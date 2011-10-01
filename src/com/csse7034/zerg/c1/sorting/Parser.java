@@ -96,7 +96,7 @@ public class Parser {
 			
 		} catch (Exception ex) {
 //System.out.println(ex.getStackTrace());
-ex.printStackTrace();
+//ex.printStackTrace();
 			return "!01";
 		}
 		

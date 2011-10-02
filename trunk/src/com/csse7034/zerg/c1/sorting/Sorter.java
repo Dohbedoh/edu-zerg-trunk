@@ -10,15 +10,15 @@ package com.csse7034.zerg.c1.sorting;
 
 public class Sorter {
 
-	//static variable to get the reference to graph object from UI
+	/** static variable to get the reference to graph object from UI */
 	static Graph graph = null;
 	static String[] sample = null;
 
-	//dummy constructor
+	/** dummy constructor */
 	public Sorter() {
 	}
 
-	//static function to sort the graph based on their level
+	/** static function to sort the graph based on their level */
 	public static String sort(Graph g) {
 
 		//the variable to store output

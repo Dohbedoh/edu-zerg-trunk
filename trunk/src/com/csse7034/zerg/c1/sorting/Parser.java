@@ -80,14 +80,14 @@ public class Parser {
 						if (!err.equals("ok")) {
 							// 02: Incorrect value exception, produced when parsing 
 							// and finding characters other than the ones in the specification
-//System.out.println("Failed Here 2");
+							//System.out.println("Failed Here 2");
 							return "!03";
 						}
 						
 					} else {
 						// 02: Incorrect value exception, produced when parsing 
 						// and finding characters other than the ones in the specification
-//System.out.println("Failed Here 3");
+						//System.out.println("Failed Here 3");
 						return "!02";
 					}
 				}
@@ -95,8 +95,8 @@ public class Parser {
 			}
 			
 		} catch (Exception ex) {
-//System.out.println(ex.getStackTrace());
-//ex.printStackTrace();
+			//System.out.println(ex.getStackTrace());
+			//ex.printStackTrace();
 			return "!01";
 		}
 		

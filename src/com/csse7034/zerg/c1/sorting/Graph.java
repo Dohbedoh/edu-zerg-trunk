@@ -147,7 +147,7 @@ public class Graph implements GraphI{
 		for(int i=0; i<size; i++)
 		{
 			tempNodes[i] = nodes[i];
-			for(int j=0; i<size;i++)
+			for(int j=0; j<size;j++)
 			{
 				tempEdges[i][j] = edges[i][j];
 			}

@@ -39,7 +39,7 @@ public class Parser {
 			
 			while ((line = br.readLine()) != null) {
 				
-				if (!line.matches("[:]*")) {
+				if (!line.contains(":")) {
 					return "!02";
 				}
 				

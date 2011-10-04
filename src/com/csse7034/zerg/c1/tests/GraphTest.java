@@ -64,17 +64,6 @@ public class GraphTest {
 		assertTrue(testGraph.indexOf("C")==2);
 		assertTrue(testGraph.indexOf("D")==3);
 		
-		// Nodes per level check, assert if values can be retrieved
-		// based on their level
-		// Output should be:
-		// A 0
-		// D 2
-		for (NodeI n : testGraph.getNodesAtLevel(0))
-			assertEquals("A 0", n.getName() + " " + n.getLevel());
-				
-		for (NodeI n : testGraph.getNodesAtLevel(2))
-			assertEquals("D 2", n.getName() + " " + n.getLevel());
-		
 		// toString() check, should return a representation of the nodes
 		// and its child, according to documentation:
 		// A: B(1)C(1)
@@ -118,7 +107,7 @@ public class GraphTest {
 	}
 	
 	/**
-	 * Graph size test:
+	 * Graph length test:
 	 * The following test case will be used
 	 * 
 	 * Assume a graph with the following structure
@@ -136,7 +125,7 @@ public class GraphTest {
 	 * 
 	 */
 	@Test
-	public void fullSizeTest() {
+	public void graphLengthTest() {
 		
 		testGraph = new Graph();
 		

@@ -175,7 +175,7 @@ public class Graph implements GraphI{
 
 
 	@Override
-	public String addEdge(String src, String dest) {
+	public void addEdge(String src, String dest) {
 		if(src!=dest)
 		{
 			int indSrc=-1, indDest=-1, i=0;
@@ -193,26 +193,35 @@ public class Graph implements GraphI{
 				i++;
 			}
 
-			if(edges[indSrc][indDest] == -1)
+			/**
+			 * Exception 03
+			 */
+			/*if(edges[indSrc][indDest] == -1)
 			{
 				return("!03");
-			}
+			}*/
 
 			edges[indSrc][indDest] = 1;
 			edges[indDest][indSrc] = -1;
 			
-			if(containsCycle(indDest, indSrc))
+			/**
+			 * Exception 03
+			 */
+			/*if(containsCycle(indDest, indSrc))
 			{
 				return("!03");
-			}
+			}*/
 			
 			int levelDest = findLevel(indDest);
 			nodes[indDest].setLevel(levelDest);
 			adjustLevelFrom(indDest,levelDest);
 			
-			return ("ok");
+			//return ("ok");
 		}else{
-			return("!03");
+			/**
+			 * Exception 03
+			 */
+			//return("!03");
 		}
 	}
 

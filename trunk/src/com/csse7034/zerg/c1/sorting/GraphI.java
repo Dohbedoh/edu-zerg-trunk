@@ -22,11 +22,10 @@ public interface GraphI {
 	 * @param dest		destination node
 	 * @return
 	 */
-	public String addEdge(String src, String dest);
+	public void addEdge(String src, String dest);
 	
 	/**
 	 * Return the depth of the graph (Maximum)
-	 * @return	the maximum depth of the Graph
 	 */
 	public int getDepth();
 	

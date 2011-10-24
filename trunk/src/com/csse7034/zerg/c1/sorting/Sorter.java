@@ -48,10 +48,7 @@ public class Sorter {
 
 
 	//static function to sort the graph based on their level
-	public static String compare(Graph g, String[] s) {
-
-		//the variable to store output
-		String output = "";
+	public static boolean compare(Graph g, String[] s){
 
 		//assign the graph
 		graph = g;
@@ -59,17 +56,20 @@ public class Sorter {
 		//assign the sample
 		sample = s;
 
-
-		try {
-			//loop through the sample to see if the leve is correctly ordered.
-
-		} catch (Exception ex) {
-			System.out.println(ex.getStackTrace());
-			ex.printStackTrace();
-			return "Error 04: Can't compare the graph and the sample";
+		if(g.size()!=s.length)
+		{
+			return false;
 		}
-
-		return output;
+		
+		int currentLvl = g.getNode(s[0]).getLevel();
+		for(String temp : s)
+		{
+			if(g.getNode(temp).getLevel()>currentLvl)
+			{
+				return false;
+			}
+		}
+		return true;
 	}
-
+	
 }

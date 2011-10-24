@@ -30,6 +30,13 @@ public interface GraphI {
 	public int getDepth();
 	
 	/**
+	 * Return a NodeI from the name
+	 * @param name		The name of the Node
+	 * @return			The node
+	 */
+	public NodeI getNode(String name);
+	
+	/**
 	 * Return an array with all the node at the given level in the Graph
 	 * @param level		The level
 	 * @return			The array with all the node at this level
@@ -42,6 +49,12 @@ public interface GraphI {
 	 * @return			The graph contains the node "name"
 	 */
 	public boolean contains(String name);
+	
+	/**
+	 * Return the size of the graph that is the number of nodes
+	 * @return			The size of the graph
+	 */
+	public int size();
 	
 	/**
 	 * Given the name of a node, return the index of the node in the array "nodes"

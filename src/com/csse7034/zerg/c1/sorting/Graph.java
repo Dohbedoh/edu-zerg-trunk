@@ -236,6 +236,10 @@ public class Graph implements GraphI{
 		return max;
 	}
 
+	@Override
+	public NodeI getNode(String name) {
+		return nodes[indexOf(name)];
+	}
 
 	@Override
 	public NodeI[] getNodesAtLevel(int level) {
@@ -255,12 +259,15 @@ public class Graph implements GraphI{
 		return res;
 	}
 
-
 	@Override
 	public boolean contains(String name) {		
 		return indexOf(name)!=-1;
 	}
-
+	
+	@Override
+	public int size() {
+		return size;
+	}
 
 	@Override
 	public int indexOf(String name) {
@@ -296,4 +303,5 @@ public class Graph implements GraphI{
 		}
 		return buffer.toString();
 	}
+
 }

@@ -60,4 +60,19 @@ public class ParserTest {
 		assertEquals("!01", Parser.parse(new Graph(), "noFile.txt"));
 	}
 	
+	/**
+	 * Incorrect output for parse2()
+	 */
+	@Test
+	public void wrongOutputTest() {
+		
+	}
+	
+	/**
+	 * Incorrect format for second (result) file
+	 */
+	public void incorrectFileFormat2Test() {
+		
+	}
+	
 }

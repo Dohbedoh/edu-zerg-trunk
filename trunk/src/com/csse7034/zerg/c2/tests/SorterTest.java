@@ -98,5 +98,13 @@ public class SorterTest {
 				"\nI\nH\nF\nE\nD\nC\nB\nA\n");
 		System.out.println(result);
 	}
-
+	
+	/**
+	 * Compare test
+	 */
+	@Test
+	public void testCompare (){
+		initializeTest();
+	}
+	
 }

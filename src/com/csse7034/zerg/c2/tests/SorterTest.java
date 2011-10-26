@@ -113,13 +113,22 @@ public class SorterTest {
 		boolean result = false;
 		try {
 			Parser.parse("test2.txt", g);
+			s = Parser.parse2("testResult2-1.txt", g);
+			result = Sorter.compare(g, s);
+			assertTrue(result);
+			
 			s = Parser.parse2("testResult2-2.txt", g);
 			result = Sorter.compare(g, s);
 			assertTrue(result);
-		} catch (Exception ex) {
-			fail();
-		}
 			
+			s = Parser.parse2("testResult2Incorrect.txt", g);
+			result = Sorter.compare(g, s);
+			assertFalse(result);
+			
+		} catch (Exception ex) {
+			assertEquals(ex.getMessage(), "The values parsed from the file do not obey the standard format for Sequence of Values");
+		}
+		
 	}
 	
 }

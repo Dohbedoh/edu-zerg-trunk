@@ -258,8 +258,8 @@ public class UI extends JFrame{
 				PrintWriter out = new PrintWriter(outFile);
 				Calendar cal = Calendar.getInstance();
 			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
-				out.append(sdf.format(cal.getTime())+"/n");
-				out.append(message+"/n");
+				out.append(sdf.format(cal.getTime())+"\n");
+				out.append(message+"\n");
 				out.close(); 
 			} catch (IOException e) { 
 				outputTextArea.setText("Error couldn't be output to text file");
@@ -279,13 +279,13 @@ public class UI extends JFrame{
 				PrintWriter out = new PrintWriter(outFile);
 				Calendar cal = Calendar.getInstance();
 			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
-				out.append(sdf.format(cal.getTime())+"/n");
-				out.append(file1Field.getText());
+				out.append(sdf.format(cal.getTime())+"\n");
+				out.append(file1Field.getText()+"\n");
 				if(mode == 2)
 				{
-					out.append(file2Field.getText());	
+					out.append(file2Field.getText()+"\n");	
 				}
-				out.append(message+"/n");
+				out.append(message+"\n");
 				out.close(); 
 			} catch (IOException e) { 
 				outputTextArea.setText("Error couldn't be output to text file");

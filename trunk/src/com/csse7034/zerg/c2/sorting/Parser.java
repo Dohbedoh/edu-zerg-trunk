@@ -136,7 +136,7 @@ public class Parser {
 		String line;
 		int size = 0;
 		String curLine;
-		String[] compList = new String[size];
+		
 		
 		//Count number of lines
 		try {
@@ -149,7 +149,7 @@ public class Parser {
 			throw new SequenceOfValuesException();		
 		}
 		
-		
+		String[] compList = new String[size];
 		
 			try {
 				BufferedReader br2 = new BufferedReader(new FileReader(new File(filePath2)));

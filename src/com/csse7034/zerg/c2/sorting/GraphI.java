@@ -7,6 +7,8 @@
 
 package com.csse7034.zerg.c2.sorting;
 
+import com.csse7034.zerg.c2.errors.CyclicGraphException;
+
 
 public interface GraphI {
 
@@ -21,8 +23,9 @@ public interface GraphI {
 	 * @param src		source node
 	 * @param dest		destination node
 	 * @return
+	 * @throws CyclicGraphException 
 	 */
-	public void addEdge(String src, String dest);
+	public void addEdge(String src, String dest) throws CyclicGraphException;
 	
 	/**
 	 * Return the depth of the graph (Maximum)

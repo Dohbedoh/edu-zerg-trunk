@@ -14,6 +14,7 @@ import com.csse7034.zerg.c2.errors.CyclicGraphException;
 import com.csse7034.zerg.c2.errors.FinitePartialOrderException;
 import com.csse7034.zerg.c2.errors.SequenceOfValuesException;
 
+
 public class Parser {
 
 	//static Graph graph = null;
@@ -129,13 +130,25 @@ public class Parser {
 
 		//Graph graph = new Graph();
 
-
+		String line;
+		int size = 0;
+		
+		try {
+		BufferedReader br = new BufferedReader(new FileReader(new File(filePath2)));
+		while ((line = br.readLine()) != null) {
+			size++;
+		}
+		br.close();
+		} catch (Exception ex) {
+			throw new SequenceOfValuesException();		
+		}
+		
 		String curLine;
-		String[] compList;
+		String[] compList = new String[size];
 		
 			try {
 				BufferedReader br2 = new BufferedReader(new FileReader(new File(filePath2)));
-							
+				
 				int i = 0;
 				while ((curLine = br2.readLine()) != null) {
 						if (g.contains(curLine)) {
@@ -160,42 +173,7 @@ public class Parser {
 					}
 				}
 
-				/*
-				byte[] c = new byte[1024];
-				int count = 0;
-				int readChars = 0;
-				while ((readChars = br2.readLine()) {
-					for (int i = 0; i < readChars; ++i) {
-						if (c[i] == '\n')
-							++count;
-					}
-				}
-				int compLines = count;
-
-				if ( compLines != 1) {
-					// file has more than 1 line of data.
-					throw new SequenceOfValuesException();
-				} else {
-					while ((compLine = br2.readLine()) != null)   {
-						compList = compLine.split(" ");
-						for (int i = 0; i < compLines; i++) {
-							String current = compList[i];
-							for(int j = 0; j < compList.length; j++) {
-								String next = compList[j];
-								if ( current == next ) {
-									//Compare data has repeating Name
-									throw new SequenceOfValuesException();
-								}
-								if (!current.matches(CharFromSet)) {
-									//Compare data Name is not a valid char
-									throw new SequenceOfValuesException();
-								}
-							}
-
-						}
-					}
-				}
-				*/
+				
 		} catch (Exception ex) {
 			//System.out.println(ex.getStackTrace());
 			//ex.printStackTrace();

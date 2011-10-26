@@ -170,7 +170,7 @@ public class UI extends JFrame implements ActionListener {
             		String result;
             		
             		try {
-            			graph = Parser.parse(file1Field.getText());
+            			Parser.parse(file1Field.getText(),graph);
             			result = Sorter.sort(graph);
             		} catch (Exception ex) {
             			ex.printStackTrace();
@@ -199,8 +199,8 @@ public class UI extends JFrame implements ActionListener {
             		String result;
             		
             		try {
-            			graph = Parser.parse(file1Field.getText());
-            			String[] value = Parser.parse2(file2Field.getText());
+            			Parser.parse(file1Field.getText(),graph);
+            			String[] value = Parser.parse2(file2Field.getText(), graph);
             			result = ((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
             		} catch (Exception ex) {
             			ex.printStackTrace();

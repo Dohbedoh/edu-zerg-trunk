@@ -29,9 +29,7 @@ public class Parser {
 	 * @param filePath	The file path of the 
 	 * @return Graph A filled graph.
 	 */
-	public static Graph parse(String filePath) throws Exception{
-
-		Graph graph = new Graph();
+	public static void parse(String filePath, GraphI graph) throws Exception{
 
 		String CharFromSet = "[[A-Za-z0-9]|[-\\+@#\\$%\\^&\\*|<>\\?]]*";
 
@@ -122,8 +120,6 @@ public class Parser {
 			//throw new FileNotFoundException("Error !01: File was not found on the specified location");
 			throw ex;
 		}
-
-		return graph;
 	}
 
 	/**

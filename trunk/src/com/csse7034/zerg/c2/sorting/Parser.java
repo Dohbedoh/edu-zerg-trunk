@@ -161,8 +161,8 @@ public class Parser {
 				int i = 0;
 				while ((curLine = br2.readLine()) != null) {
 					if (curLine.length() != 0) {
-						if (g.contains(curLine)) {
-							compList[i] = curLine;
+						if (g.contains(curLine.trim())) {
+							compList[i] = curLine.trim();
 							i++;
 						} else {
 							throw new FinitePartialOrderException();
@@ -172,9 +172,9 @@ public class Parser {
 				
 
 				for (int j = 0; j < compList.length; j++){
-					String current = compList[j];
+					String current = compList[j].trim();
 					for (int k = 0; k < compList.length; k++) {
-						String next = compList[k];
+						String next = compList[k].trim();
 						
 						if (k != j) {
 							if ( current.equals(next) ) {

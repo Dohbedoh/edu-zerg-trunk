@@ -116,17 +116,31 @@ public class SorterTest {
 			s = Parser.parse2("testResult2-1.txt", g);
 			result = Sorter.compare(g, s);
 			assertTrue(result);
-			
+			System.out.println(result);
 			s = Parser.parse2("testResult2-2.txt", g);
 			result = Sorter.compare(g, s);
 			assertTrue(result);
+			System.out.println(result);
+			
+			
+			s = Parser.parse2("testResult2Incorrect3.txt", g);
+			result = Sorter.compare(g, s);
+			System.out.println(result);
+			assertFalse(result);
+			
+			s = Parser.parse2("testResult2Incorrect2.txt", g);
+			result = Sorter.compare(g, s);
+			System.out.println(result);
+			assertFalse(result);
 			
 			s = Parser.parse2("testResult2Incorrect.txt", g);
 			result = Sorter.compare(g, s);
+			System.out.println(result);
 			assertFalse(result);
 			
 		} catch (Exception ex) {
-			assertEquals(ex.getMessage(), "The values parsed from the file do not obey the standard format for Sequence of Values");
+			//assertEquals(ex.getMessage(), "Values in file 2 and file 1 do not match");
+			ex.printStackTrace();
 		}
 		
 	}

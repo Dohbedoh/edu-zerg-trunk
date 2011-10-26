@@ -71,13 +71,31 @@ public class Sorter {
 			return false;
 		}
 		
-		int currentLvl = g.getNode(s[0]).getLevel();
-		for(String temp : s) {
-			if(g.getNode(temp).getLevel()>currentLvl) {
+		if(g.getNode(s[0]).getLevel()==0)
+		{
+			int currentLvl = g.getNode(s[0]).getLevel();
+			for(String temp : s) {
+				if(g.getNode(temp).getLevel()<currentLvl) {
+					return false;
+				}
+				currentLvl = g.getNode(temp).getLevel();
+			}
+		}else{
+			if(g.getNode(s[0]).getLevel()==g.getDepth())
+			{
+				int currentLvl = g.getNode(s[0]).getLevel();
+				for(String temp : s) {
+					if(g.getNode(temp).getLevel()>currentLvl) {
+						return false;
+					}
+					currentLvl = g.getNode(temp).getLevel();
+				}
+			}else{
 				return false;
 			}
 		}
 		return true;
+		
 	}
 	
 }

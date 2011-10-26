@@ -168,9 +168,10 @@ public class UI extends JFrame implements ActionListener {
             	if (mode == 1){
             		System.out.println("You clicked run!");
             		String result;
-            		
             		try {
+            			graph.emptyGraph();
             			Parser.parse(file1Field.getText(),graph);
+                		System.out.println(graph.toString());
             			result = Sorter.sort(graph);
             		} catch (Exception ex) {
             			ex.printStackTrace();
@@ -199,8 +200,10 @@ public class UI extends JFrame implements ActionListener {
             		String result;
             		
             		try {
+            			graph.emptyGraph();
             			Parser.parse(file1Field.getText(),graph);
             			String[] value = Parser.parse2(file2Field.getText(), graph);
+                		outputTextArea.setText(value.toString());
             			result = ((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
             		} catch (Exception ex) {
             			ex.printStackTrace();
@@ -220,8 +223,10 @@ public class UI extends JFrame implements ActionListener {
             		} else {
             			result = Sorter.sort(graph);
             		}
+            	*/
+            	
             		outputTextArea.setText(result);
-            		*/
+            	
             	}
             }
         }); 

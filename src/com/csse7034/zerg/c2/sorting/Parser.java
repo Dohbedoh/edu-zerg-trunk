@@ -127,12 +127,14 @@ public class Parser {
 	}
 
 	public static String[] parse2(String filePath2, Graph g) throws Exception{
-
-		//Graph graph = new Graph();
-
+		
+		//Initialising Variables
 		String line;
 		int size = 0;
+		String curLine;
+		String[] compList = new String[size];
 		
+		//Count number of lines
 		try {
 		BufferedReader br = new BufferedReader(new FileReader(new File(filePath2)));
 		while ((line = br.readLine()) != null) {
@@ -143,20 +145,21 @@ public class Parser {
 			throw new SequenceOfValuesException();		
 		}
 		
-		String curLine;
-		String[] compList = new String[size];
+		
 		
 			try {
 				BufferedReader br2 = new BufferedReader(new FileReader(new File(filePath2)));
 				
 				int i = 0;
 				while ((curLine = br2.readLine()) != null) {
+					if (curLine.length() != 0) {
 						if (g.contains(curLine)) {
 							compList[i] = curLine;
 							i++;
 						} else {
 							throw new FinitePartialOrderException();
 						}
+					}
 				}
 				
 

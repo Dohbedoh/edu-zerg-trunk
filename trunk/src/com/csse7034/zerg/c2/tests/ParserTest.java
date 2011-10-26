@@ -32,18 +32,26 @@ public class ParserTest {
 	@Test
 	public void validFile() {
 		Graph g = new Graph();
+		boolean caughtE = false;
 		try {
 			Parser.parse("normalFlow.txt", g);
 		} catch (FinitePartialOrderException fpoe) {
+			caughtE = true;
 			fail();
 		} catch (CyclicGraphException cge) {
+			caughtE = true;
 			fail();
 		} catch (SequenceOfValuesException sove) {
+			caughtE = true;
 			fail();
 		} catch (Exception ex) {
 			
 		}
-		assertTrue(true);
+		if (!caughtE) {
+			assertTrue(true);
+		} else {
+			fail();
+		}
 	}
 	
 	/**
@@ -111,6 +119,7 @@ public class ParserTest {
 				assertEquals(correctResults[i], result[i]);
 			}
 		} catch (Exception ex) {
+			fail();
 		}	
 	}
 	
@@ -130,6 +139,7 @@ public class ParserTest {
 				assertEquals(correctResults[i], result[i]);
 			}
 		} catch (Exception ex) {
+			fail();
 		}
 	}
 	

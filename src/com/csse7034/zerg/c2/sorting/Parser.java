@@ -125,18 +125,42 @@ public class Parser {
 		return graph;
 	}
 
-	public static String[] parse2(String filePath2) throws Exception{
+	public static String[] parse2(String filePath2, Graph g) throws Exception{
 
-		Graph graph = new Graph();
+		//Graph graph = new Graph();
 
-		String CharFromSet = "[[A-Za-z0-9]|[-\\+@#\\$%\\^&\\*|<>\\?]]*";
 
-		String compLine = "";
+		String curLine;
 		String[] compList;
 		
 			try {
 				BufferedReader br2 = new BufferedReader(new FileReader(new File(filePath2)));
+							
+				int i = 0;
+				while ((curLine = br2.readLine()) != null) {
+						if (g.contains(curLine)) {
+							compList[i] = curLine;
+							i++;
+						} else {
+							throw new FinitePartialOrderException();
+						}
+				}
+				
 
+				for (int j = 0; j < compList.length; j++){
+					String current = compList[j];
+					for (int k = 0; k < compList.length; k++) {
+						String next = compList[k];
+						
+						if (k != j) {
+							if ( current.equals(next) ) {
+								throw new FinitePartialOrderException();
+							}
+						}
+					}
+				}
+
+				/*
 				byte[] c = new byte[1024];
 				int count = 0;
 				int readChars = 0;
@@ -171,6 +195,7 @@ public class Parser {
 						}
 					}
 				}
+				*/
 		} catch (Exception ex) {
 			//System.out.println(ex.getStackTrace());
 			//ex.printStackTrace();

@@ -31,9 +31,9 @@ public class ParserTest {
 	 */
 	@Test
 	public void validFile() {
-		
+		Graph g = new Graph();
 		try {
-			Parser.parse("normalFlow.txt");
+			Parser.parse("normalFlow.txt", g);
 		} catch (FinitePartialOrderException fpoe) {
 			fail();
 		} catch (CyclicGraphException cge) {
@@ -59,8 +59,9 @@ public class ParserTest {
 	@Test
 	public void incorrectFormat() {
 		boolean caught = false;
+		Graph g = new Graph();
 		try {
-			Parser.parse("invalidCharacters.txt");
+			Parser.parse("invalidCharacters.txt", g);
 		} catch (SequenceOfValuesException sove) {
 			caught = true;
 			assertTrue(true);
@@ -86,8 +87,9 @@ public class ParserTest {
 	 */
 	@Test
 	public void missingFile() {
+		Graph g = new Graph();
 		try {
-			Parser.parse("noFile.txt");
+			Parser.parse("noFile.txt", g);
 		} catch (Exception ex) {
 			assertTrue(true);
 		}
@@ -99,8 +101,9 @@ public class ParserTest {
 	@Test
 	public void outputTest() {
 		String[] result;
+		Graph g = new Graph();
 		try {
-			Graph g = Parser.parse("test2.txt");
+			Parser.parse("test2.txt", g);
 			result = Parser.parse2("testResult2-1.txt", g);
 			String[] correctResults = {"A", "B", "C", "D"};
 			
@@ -117,8 +120,9 @@ public class ParserTest {
 	@Test
 	public void spaceAndTabParse2Test() {
 		String[] result;
+		Graph g = new Graph();
 		try {
-			Graph g = Parser.parse("test2.txt");
+			Parser.parse("test2.txt", g);
 			result = Parser.parse2("spaceAndTabTestResult2-1.txt", g);
 			String[] correctResults = {"A", "B", "C", "D"};
 			

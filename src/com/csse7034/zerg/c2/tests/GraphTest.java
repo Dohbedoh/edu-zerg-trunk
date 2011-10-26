@@ -97,7 +97,7 @@ public class GraphTest {
 	public void cyclicError() {
 		
 		testGraph = new Graph();
-		
+		boolean caughtE = false;
 		// Add node check, should not return errors
 		testGraph.addNode("A");
 		testGraph.addNode("B");
@@ -112,8 +112,13 @@ public class GraphTest {
 			testGraph.addEdge("D", "A");
 		} catch (CyclicGraphException e) {
 			// TODO Auto-generated catch block
+			caughtE = true;
 			e.printStackTrace();
 			assertEquals("Error !03: The suggested finite partial order contains a cyclic reference", e.getMessage());
+		}
+		
+		if (!caughtE) {
+			fail();
 		}
 		
 		//throwing null pointer exception instead, needs fix

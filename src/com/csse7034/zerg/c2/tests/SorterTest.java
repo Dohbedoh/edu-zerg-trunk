@@ -12,8 +12,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.csse7034.zerg.c1.sorting.Graph;
-import com.csse7034.zerg.c1.sorting.Sorter;
+import com.csse7034.zerg.c2.sorting.Graph;
+import com.csse7034.zerg.c2.sorting.Parser;
+import com.csse7034.zerg.c2.sorting.Sorter;
 
 public class SorterTest {
 
@@ -59,7 +60,7 @@ public class SorterTest {
 		testGraph.addNode("X");
 		testGraph.addNode("Y");
 		testGraph.addNode("Z");
-		
+		try {
 		testGraph.addEdge("A", "B");		
 		testGraph.addEdge("B", "C");		
 		testGraph.addEdge("C", "D");		
@@ -81,6 +82,9 @@ public class SorterTest {
 		testGraph.addEdge("Q", "X");
 		testGraph.addEdge("Q", "Y");		
 		testGraph.addEdge("Y", "Z");
+		} catch (Exception ex) {
+			
+		}
 	}
 	
 	/**
@@ -104,7 +108,18 @@ public class SorterTest {
 	 */
 	@Test
 	public void testCompare (){
-		initializeTest();
+		Graph g = new Graph();
+		String[] s;
+		boolean result = false;
+		try {
+			Parser.parse("test2.txt", g);
+			s = Parser.parse2("testResult2-2.txt", g);
+			result = Sorter.compare(g, s);
+			assertTrue(result);
+		} catch (Exception ex) {
+			fail();
+		}
+			
 	}
 	
 }

@@ -113,7 +113,7 @@ public class ParserTest {
 		try {
 			Parser.parse("test2.txt", g);
 			result = Parser.parse2("testResult2-1.txt", g);
-			String[] correctResults = {"A", "B", "C", "D"};
+			String[] correctResults = {"D", "C", "B", "A"};
 			
 			for (int i = 0; i < correctResults.length; i++) {
 				assertEquals(correctResults[i], result[i]);
@@ -133,7 +133,7 @@ public class ParserTest {
 		try {
 			Parser.parse("test2.txt", g);
 			result = Parser.parse2("spaceAndTabTestResult2-1.txt", g);
-			String[] correctResults = {"A", "B", "C", "D"};
+			String[] correctResults = {"D", "C", "B", "A"};
 			
 			for (int i = 0; i < correctResults.length; i++) {
 				assertEquals(correctResults[i], result[i]);

@@ -9,10 +9,17 @@ package com.csse7034.zerg.c2.sorting;
 
 import java.awt.*; 
 import java.awt.event.*; 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.*;
 
-public class UI extends JFrame implements ActionListener {
+public class UI extends JFrame{
 	
 	  /**
 	   * The members.
@@ -173,9 +180,11 @@ public class UI extends JFrame implements ActionListener {
             			Parser.parse(file1Field.getText(),graph);
                 		System.out.println(graph.toString());
             			result = Sorter.sort(graph);
+            			appendResult(result);
             		} catch (Exception ex) {
             			ex.printStackTrace();
             			result = ex.getMessage();
+            			appendError(result);
             		}
             		
             		// Error interpretation
@@ -205,9 +214,11 @@ public class UI extends JFrame implements ActionListener {
             			String[] value = Parser.parse2(file2Field.getText(), graph);
                 		outputTextArea.setText(value.toString());
             			result = ((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
+            			appendResult(result);
             		} catch (Exception ex) {
             			ex.printStackTrace();
             			result = ex.getMessage();
+            			appendError(result);
             		}
             		
             	/*	System.out.println("You clicked run!");
@@ -229,11 +240,60 @@ public class UI extends JFrame implements ActionListener {
             	
             	}
             }
-        }); 
+        });
 	  }
 
+	  /* BEGIN Allan */
+	  
+	  private void appendError(String message)
+	  {
+		  try { 
+			  	File file = new File("errorlog.txt");
+			  	if(!file.exists())
+			  	{
+			  		file.createNewFile();
+			  	}
+			  	System.out.println(file.getPath());
+				FileWriter outFile = new FileWriter(file, true); 
+				PrintWriter out = new PrintWriter(outFile);
+				Calendar cal = Calendar.getInstance();
+			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
+				out.append(sdf.format(cal.getTime())+"/n");
+				out.append(message+"/n");
+				out.close(); 
+			} catch (IOException e) { 
+				outputTextArea.setText("Error couldn't be output to text file");
+			} 
+	  }
+	  
+	  private void appendResult(String message)
+	  {
+		  try { 
+			  File file = new File("resultlog.txt");
+			  	if(!file.exists())
+			  	{
+			  		file.createNewFile();
+			  	}
+			  	System.out.println(file.getPath());
+				FileWriter outFile = new FileWriter(file, true); 
+				PrintWriter out = new PrintWriter(outFile);
+				Calendar cal = Calendar.getInstance();
+			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
+				out.append(sdf.format(cal.getTime())+"/n");
+				out.append(file1Field.getText());
+				if(mode == 2)
+				{
+					out.append(file2Field.getText());	
+				}
+				out.append(message+"/n");
+				out.close(); 
+			} catch (IOException e) { 
+				outputTextArea.setText("Error couldn't be output to text file");
+			} 
+	  }
 
-	
+	  /* Allan END*/
+	  
 	/**
 	 * main Java method which executes with the program call
 	 * @param args	Additional parameters required for program execution
@@ -279,14 +339,6 @@ public class UI extends JFrame implements ActionListener {
 			} 
 		}
 		*/
-		
-	}
-
-
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 }

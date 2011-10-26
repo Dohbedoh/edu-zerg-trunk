@@ -58,14 +58,21 @@ public class ParserTest {
 	 */
 	@Test
 	public void incorrectFormat() {
+		boolean caught = false;
 		try {
 			Parser.parse("invalidCharacters.txt");
 		} catch (SequenceOfValuesException sove) {
-			fail();
+			caught = true;
+			assertTrue(true);
+		} catch (FinitePartialOrderException fpoe) {
+			caught = true;
+			assertTrue(true);
 		} catch (Exception ex) {
 			
 		}
-		assertTrue(true);
+		if (!caught) {
+			fail();
+		}
 	}
 
 	/**
@@ -87,18 +94,39 @@ public class ParserTest {
 	}
 	
 	/**
-	 * Incorrect output for parse2()
+	 * test for output of parse2()
 	 */
 	@Test
-	public void wrongOutputTest() {
-		
+	public void outputTest() {
+		String[] result;
+		try {
+			Graph g = Parser.parse("test2.txt");
+			result = Parser.parse2("testResult2-1.txt", g);
+			String[] correctResults = {"A", "B", "C", "D"};
+			
+			for (int i = 0; i < correctResults.length; i++) {
+				assertEquals(correctResults[i], result[i]);
+			}
+		} catch (Exception ex) {
+		}	
 	}
 	
 	/**
-	 * Incorrect format for second (result) file
+	 * Tests for space and tabs in second result file
 	 */
-	public void incorrectFileFormat2Test() {
-		
+	@Test
+	public void spaceAndTabParse2Test() {
+		String[] result;
+		try {
+			Graph g = Parser.parse("test2.txt");
+			result = Parser.parse2("spaceAndTabTestResult2-1.txt", g);
+			String[] correctResults = {"A", "B", "C", "D"};
+			
+			for (int i = 0; i < correctResults.length; i++) {
+				assertEquals(correctResults[i], result[i]);
+			}
+		} catch (Exception ex) {
+		}
 	}
 	
 }

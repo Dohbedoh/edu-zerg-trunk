@@ -10,9 +10,7 @@ package com.csse7034.zerg.c2.sorting;
 import java.io.*;
 import java.util.*;
 
-import com.csse7034.zerg.c2.errors.CyclicGraphException;
-import com.csse7034.zerg.c2.errors.FinitePartialOrderException;
-import com.csse7034.zerg.c2.errors.SequenceOfValuesException;
+import com.csse7034.zerg.c2.errors.*;
 
 
 public class Parser {
@@ -161,7 +159,7 @@ public class Parser {
 							compList[i] = curLine.trim();
 							i++;
 						} else {
-							throw new FinitePartialOrderException();
+							throw new NoSuchNodeException();
 						}
 					}
 				}
@@ -181,10 +179,10 @@ public class Parser {
 				}
 
 				
-		} catch (Exception ex) {
+		} catch (IOException ex) {
 			//System.out.println(ex.getStackTrace());
-			//ex.printStackTrace();
-			throw new SequenceOfValuesException();
+			ex.printStackTrace();
+			//throw new SequenceOfValuesException();
 		}
 
 		return compList;

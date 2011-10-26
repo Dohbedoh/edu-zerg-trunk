@@ -10,14 +10,7 @@ package com.csse7034.zerg.c2.sorting;
 import java.awt.*; 
 import java.awt.event.*; 
 
-import javax.swing.*; 
-import javax.swing.filechooser.*; 
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Date;
-import java.util.Scanner;
+import javax.swing.*;
 
 public class UI extends JFrame implements ActionListener {
 	
@@ -54,6 +47,7 @@ public class UI extends JFrame implements ActionListener {
 	  
 	  JTextArea outputTextArea = new JTextArea(20, 30);
 	  JScrollPane bottomPanel = new JScrollPane(outputTextArea);
+	  
 	  
 	  /**
 	   * The constructor.
@@ -173,10 +167,18 @@ public class UI extends JFrame implements ActionListener {
             {
             	if (mode == 1){
             		System.out.println("You clicked run!");
-            		String result = Parser.parse(graph, file1Field.getText());
+            		String result;
+            		
+            		try {
+            			graph = Parser.parse(file1Field.getText());
+            			result = Sorter.sort(graph);
+            		} catch (Exception ex) {
+            			ex.printStackTrace();
+            			result = ex.getMessage();
+            		}
             		
             		// Error interpretation
-            		if (result.equals("!01")){
+            	/*	if (result.equals("!01")){
             			result = "Error !01: File was not found on the specified location";
             		} else if (result.equals("!02")){
             			result= "Error !02: A line in the input file does not obey the specified format";
@@ -184,7 +186,8 @@ public class UI extends JFrame implements ActionListener {
             			result = "Error !03: The suggested finite partial order contains a cyclic reference";
             		} else {
             			result = Sorter.sort(graph);
-            		}
+            		}*/
+            		
             		outputTextArea.setText(result);
             	}
             	else{
@@ -193,7 +196,18 @@ public class UI extends JFrame implements ActionListener {
             		 * The filename for mode 1 is file1Field.getText()
             		 * The filename for mode 2 is file2Field.getText()
             		 * */
-            		System.out.println("You clicked run!");
+            		String result;
+            		
+            		try {
+            			graph = Parser.parse(file1Field.getText());
+            			String[] value = Parser.parse2(file2Field.getText());
+            			result = ((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
+            		} catch (Exception ex) {
+            			ex.printStackTrace();
+            			result = ex.getMessage();
+            		}
+            		
+            	/*	System.out.println("You clicked run!");
             		String result = Parser.parse(graph, file1Field.getText());
             		
             		// Error interpretation
@@ -207,7 +221,7 @@ public class UI extends JFrame implements ActionListener {
             			result = Sorter.sort(graph);
             		}
             		outputTextArea.setText(result);
-            		
+            		*/
             	}
             }
         }); 

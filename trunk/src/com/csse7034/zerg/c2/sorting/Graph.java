@@ -9,6 +9,8 @@ package com.csse7034.zerg.c2.sorting;
 
 import java.util.Vector;
 
+import com.csse7034.zerg.c2.errors.CyclicGraphException;
+
 
 public class Graph implements GraphI{
 
@@ -175,7 +177,7 @@ public class Graph implements GraphI{
 
 
 	@Override
-	public void addEdge(String src, String dest) {
+	public void addEdge(String src, String dest) throws CyclicGraphException{
 		if(src!=dest)
 		{
 			int indSrc=-1, indDest=-1, i=0;
@@ -196,6 +198,10 @@ public class Graph implements GraphI{
 			/**
 			 * Exception 03
 			 */
+			if(edges[indSrc][indDest] == -1)
+			{
+				throw new CyclicGraphException();
+			}
 			/*if(edges[indSrc][indDest] == -1)
 			{
 				return("!03");
@@ -207,6 +213,10 @@ public class Graph implements GraphI{
 			/**
 			 * Exception 03
 			 */
+			if(containsCycle(indDest, indSrc))
+			{
+				throw new CyclicGraphException();
+			}
 			/*if(containsCycle(indDest, indSrc))
 			{
 				return("!03");
@@ -221,6 +231,7 @@ public class Graph implements GraphI{
 			/**
 			 * Exception 03
 			 */
+			throw new CyclicGraphException();
 			//return("!03");
 		}
 	}

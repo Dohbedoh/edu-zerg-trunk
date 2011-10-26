@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.csse7034.zerg.c2.errors.CyclicGraphException;
 import com.csse7034.zerg.c2.sorting.Graph;
 import com.csse7034.zerg.c2.sorting.GraphI;
 import com.csse7034.zerg.c2.sorting.Node;
@@ -45,10 +46,16 @@ public class GraphTest {
 		testGraph.addNode("D");
 		
 		// Add edge check, should return no error
-		testGraph.addEdge("A", "B");
-		testGraph.addEdge("A", "C");
-		testGraph.addEdge("B", "D");
-		testGraph.addEdge("C", "D");
+		try {
+			testGraph.addEdge("A", "B");		
+			testGraph.addEdge("A", "C");
+			testGraph.addEdge("B", "D");
+			testGraph.addEdge("C", "D");
+		} catch (CyclicGraphException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 		
 		// Depth check, should be 2
 		assertEquals(2,testGraph.getDepth());
@@ -87,7 +94,7 @@ public class GraphTest {
 	 * 
 	 */
 	@Test
-	public void acyclicError() {
+	public void cyclicError() {
 		
 		testGraph = new Graph();
 		
@@ -98,9 +105,17 @@ public class GraphTest {
 		testGraph.addNode("D");
 		
 		// Add edge check, should return no error
-		testGraph.addEdge("A", "B");
-		testGraph.addEdge("B", "C");
-		testGraph.addEdge("C", "D");
+		try {
+			testGraph.addEdge("A", "B");
+			testGraph.addEdge("B", "C");
+			testGraph.addEdge("C", "D");
+			testGraph.addEdge("D", "A");
+		} catch (CyclicGraphException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			assertEquals("Error !03: The suggested finite partial order contains a cyclic reference", e.getMessage());
+		}
+		
 		//throwing null pointer exception instead, needs fix
 		//assertEquals("!03", testGraph.addEdge("D", "A"));
 		
@@ -151,37 +166,35 @@ public class GraphTest {
 		testGraph.addNode("Z");
 		
 		// Add edge check, should return no error
-		testGraph.addEdge("A", "B");
-		
-		testGraph.addEdge("B", "C");
-		
-		testGraph.addEdge("C", "D");
-		
-		testGraph.addEdge("D", "E");
-		testGraph.addEdge("D", "F");
-		testGraph.addEdge("D", "H");
-		testGraph.addEdge("D", "Z");
-		
-		testGraph.addEdge("F", "I");
-		testGraph.addEdge("F", "W");
-		testGraph.addEdge("F", "H");
-		
-		testGraph.addEdge("H", "I");
-		testGraph.addEdge("H", "J");
-		
-		testGraph.addEdge("J", "K");
-		testGraph.addEdge("J", "L");
-		
-		testGraph.addEdge("L", "M");
-		testGraph.addEdge("L", "N");
-		
-		testGraph.addEdge("N", "Q");
-		
-		testGraph.addEdge("Q", "W");
-		testGraph.addEdge("Q", "X");
-		testGraph.addEdge("Q", "Y");
-		
-		testGraph.addEdge("Y", "Z");		
+				
+		try {
+			testGraph.addEdge("A", "B");
+			testGraph.addEdge("B", "C");
+			testGraph.addEdge("C", "D");
+			testGraph.addEdge("D", "E");
+			testGraph.addEdge("D", "F");
+			testGraph.addEdge("D", "H");
+			testGraph.addEdge("D", "Z");		
+			testGraph.addEdge("F", "I");
+			testGraph.addEdge("F", "W");
+			testGraph.addEdge("F", "H");		
+			testGraph.addEdge("H", "I");
+			testGraph.addEdge("H", "J");		
+			testGraph.addEdge("J", "K");
+			testGraph.addEdge("J", "L");		
+			testGraph.addEdge("L", "M");
+			testGraph.addEdge("L", "N");		
+			testGraph.addEdge("N", "Q");		
+			testGraph.addEdge("Q", "W");
+			testGraph.addEdge("Q", "X");
+			testGraph.addEdge("Q", "Y");
+			testGraph.addEdge("Y", "Z");
+		} catch (CyclicGraphException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}		
+				
 	
 		// toString() check, should return a representation of the nodes
 		// and its child, according to documentation
@@ -204,10 +217,17 @@ public class GraphTest {
 		testGraph.addNode("D");
 		
 		// Add edge check, should return no error
-		testGraph.addEdge("A", "B");
-		testGraph.addEdge("A", "C");
-		testGraph.addEdge("B", "D");
-		testGraph.addEdge("C", "D");
+		try {
+			testGraph.addEdge("A", "B");
+			testGraph.addEdge("A", "C");
+			testGraph.addEdge("B", "D");
+			testGraph.addEdge("C", "D");
+		} catch (CyclicGraphException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
 		
 		NodeI[] node = testGraph.getNodesAtLevel(0);
 		System.out.println(testGraph.getDepth());

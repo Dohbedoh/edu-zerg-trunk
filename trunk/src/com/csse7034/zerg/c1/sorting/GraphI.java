@@ -22,19 +22,12 @@ public interface GraphI {
 	 * @param dest		destination node
 	 * @return
 	 */
-	public void addEdge(String src, String dest);
+	public String addEdge(String src, String dest);
 	
 	/**
 	 * Return the depth of the graph (Maximum)
 	 */
 	public int getDepth();
-	
-	/**
-	 * Return a NodeI from the name
-	 * @param name		The name of the Node
-	 * @return			The node
-	 */
-	public NodeI getNode(String name);
 	
 	/**
 	 * Return an array with all the node at the given level in the Graph
@@ -49,12 +42,6 @@ public interface GraphI {
 	 * @return			The graph contains the node "name"
 	 */
 	public boolean contains(String name);
-	
-	/**
-	 * Return the size of the graph that is the number of nodes
-	 * @return			The size of the graph
-	 */
-	public int size();
 	
 	/**
 	 * Given the name of a node, return the index of the node in the array "nodes"

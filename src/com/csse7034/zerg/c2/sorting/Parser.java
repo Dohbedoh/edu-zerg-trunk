@@ -27,7 +27,7 @@ public class Parser {
 	 * to fill the graph.
 	 * @param g	The created empty Graph object
 	 * @param filePath	The file path of the 
-	 * @return
+	 * @return Graph A filled graph.
 	 */
 	public static Graph parse(String filePath) throws Exception{
 
@@ -126,6 +126,14 @@ public class Parser {
 		return graph;
 	}
 
+	/**
+	 * Parse the data in the input text file with its file path and translates the data into a string list  
+	 * containing individual nodes for topological sort checking
+	 * @param	filePath2	The file path
+	 * @param	g	The graph to check nodes with 
+	 * @return	String[]	A String list containing individual nodes
+	 */
+	
 	public static String[] parse2(String filePath2, Graph g) throws Exception{
 		
 		//Initialising Variables

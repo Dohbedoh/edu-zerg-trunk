@@ -60,6 +60,11 @@ public interface GraphI {
 	public int size();
 	
 	/**
+	 * Remove nodes and edges in the graph. The size is set to 0.
+	 */
+	public void emptyGraph();
+	
+	/**
 	 * Given the name of a node, return the index of the node in the array "nodes"
 	 * @param name		The name of the node
 	 * @return			The index of the node in the array <nodes>

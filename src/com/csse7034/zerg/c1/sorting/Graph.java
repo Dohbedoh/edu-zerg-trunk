@@ -173,9 +173,8 @@ public class Graph implements GraphI{
 		size++;
 	}
 
-
 	@Override
-	public void addEdge(String src, String dest) {
+	public String addEdge(String src, String dest) {
 		if(src!=dest)
 		{
 			int indSrc=-1, indDest=-1, i=0;
@@ -193,35 +192,26 @@ public class Graph implements GraphI{
 				i++;
 			}
 
-			/**
-			 * Exception 03
-			 */
-			/*if(edges[indSrc][indDest] == -1)
+			if(edges[indSrc][indDest] == -1)
 			{
 				return("!03");
-			}*/
+			}
 
 			edges[indSrc][indDest] = 1;
 			edges[indDest][indSrc] = -1;
 			
-			/**
-			 * Exception 03
-			 */
-			/*if(containsCycle(indDest, indSrc))
+			if(containsCycle(indDest, indSrc))
 			{
 				return("!03");
-			}*/
+			}
 			
 			int levelDest = findLevel(indDest);
 			nodes[indDest].setLevel(levelDest);
 			adjustLevelFrom(indDest,levelDest);
 			
-			//return ("ok");
+			return ("ok");
 		}else{
-			/**
-			 * Exception 03
-			 */
-			//return("!03");
+			return("!03");
 		}
 	}
 
@@ -236,10 +226,6 @@ public class Graph implements GraphI{
 		return max;
 	}
 
-	@Override
-	public NodeI getNode(String name) {
-		return nodes[indexOf(name)];
-	}
 
 	@Override
 	public NodeI[] getNodesAtLevel(int level) {
@@ -259,15 +245,12 @@ public class Graph implements GraphI{
 		return res;
 	}
 
+
 	@Override
 	public boolean contains(String name) {		
 		return indexOf(name)!=-1;
 	}
-	
-	@Override
-	public int size() {
-		return size;
-	}
+
 
 	@Override
 	public int indexOf(String name) {
@@ -303,5 +286,4 @@ public class Graph implements GraphI{
 		}
 		return buffer.toString();
 	}
-
 }

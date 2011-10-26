@@ -13,8 +13,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.csse7034.zerg.c1.sorting.Graph;
-import com.csse7034.zerg.c1.sorting.Parser;
+import com.csse7034.zerg.c2.sorting.Graph;
+import com.csse7034.zerg.c2.sorting.Parser;
+import com.csse7034.zerg.c2.errors.FinitePartialOrderException;
+import com.csse7034.zerg.c2.errors.CyclicGraphException;
+import com.csse7034.zerg.c2.errors.SequenceOfValuesException;
 
 public class ParserTest {
 	
@@ -28,7 +31,19 @@ public class ParserTest {
 	 */
 	@Test
 	public void validFile() {
-		assertEquals("ok", Parser.parse(new Graph(), "normalFlow.txt"));
+		
+		try {
+			Parser.parse("normalFlow.txt");
+		} catch (FinitePartialOrderException fpoe) {
+			fail();
+		} catch (CyclicGraphException cge) {
+			fail();
+		} catch (SequenceOfValuesException sove) {
+			fail();
+		} catch (Exception ex) {
+			
+		}
+		assertTrue(true);
 	}
 	
 	/**
@@ -43,7 +58,14 @@ public class ParserTest {
 	 */
 	@Test
 	public void incorrectFormat() {
-		assertEquals("!02", Parser.parse(new Graph(), "invalidCharacters.txt"));
+		try {
+			Parser.parse("invalidCharacters.txt");
+		} catch (SequenceOfValuesException sove) {
+			fail();
+		} catch (Exception ex) {
+			
+		}
+		assertTrue(true);
 	}
 
 	/**
@@ -57,7 +79,11 @@ public class ParserTest {
 	 */
 	@Test
 	public void missingFile() {
-		assertEquals("!01", Parser.parse(new Graph(), "noFile.txt"));
+		try {
+			Parser.parse("noFile.txt");
+		} catch (Exception ex) {
+			assertTrue(true);
+		}
 	}
 	
 	/**

@@ -232,7 +232,7 @@ public class GUI extends JFrame{
             		 * The filename for mode 1 is file1Field.getText()
             		 * The filename for mode 2 is file2Field.getText()
             		 * */
-            		String result;
+            		String result="";
             		
             		try {
             			graph.emptyGraph();
@@ -264,7 +264,7 @@ public class GUI extends JFrame{
             			}
             		} catch (Exception ex) {
             			ex.printStackTrace();
-            			result = ex.getMessage();
+            			result += ex.getMessage();
             			statusTextArea.setBackground(Color.RED);
             			appendError(result);
             		}
@@ -291,7 +291,7 @@ public class GUI extends JFrame{
 				PrintWriter out = new PrintWriter(outFile);
 				Calendar cal = Calendar.getInstance();
 			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
-				out.append(sdf.format(cal.getTime())+"\n");
+				out.append("-----------------------------\n"+sdf.format(cal.getTime())+"\n");
 				out.append(message+"\n");
 				out.close(); 
 			} catch (IOException e) { 
@@ -313,7 +313,7 @@ public class GUI extends JFrame{
 				PrintWriter out = new PrintWriter(outFile);
 				Calendar cal = Calendar.getInstance();
 			    SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
-				out.append(sdf.format(cal.getTime())+"\n");
+				out.append("-----------------------------\n"+sdf.format(cal.getTime())+"\n");
 				out.append(file1Field.getText()+"\n");
 				if(mode == 2)
 				{

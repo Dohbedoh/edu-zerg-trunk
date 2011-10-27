@@ -15,7 +15,7 @@ import org.junit.Test;
 
 import com.csse7034.zerg.c2.sorting.Graph;
 import com.csse7034.zerg.c2.sorting.Parser;
-import com.csse7034.zerg.c2.errors.FinitePartialOrderException;
+import com.csse7034.zerg.c2.errors.IncorrectFileFormatException;
 import com.csse7034.zerg.c2.errors.CyclicGraphException;
 import com.csse7034.zerg.c2.errors.SequenceOfValuesException;
 
@@ -35,7 +35,7 @@ public class ParserTest {
 		boolean caughtE = false;
 		try {
 			Parser.parse("normalFlow.txt", g);
-		} catch (FinitePartialOrderException fpoe) {
+		} catch (IncorrectFileFormatException fpoe) {
 			caughtE = true;
 			fail();
 		} catch (CyclicGraphException cge) {
@@ -73,7 +73,7 @@ public class ParserTest {
 		} catch (SequenceOfValuesException sove) {
 			caught = true;
 			assertTrue(true);
-		} catch (FinitePartialOrderException fpoe) {
+		} catch (IncorrectFileFormatException fpoe) {
 			caught = true;
 			assertTrue(true);
 		} catch (Exception ex) {

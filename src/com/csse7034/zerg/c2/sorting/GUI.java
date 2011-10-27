@@ -1,6 +1,6 @@
 /**
- * Class UI: Class responsable of running the main method that executes the program,
- * it also takes the errors produced by other units and returns an appropiate error message
+ * Class UI: Class responsible of running the main method that executes the program,
+ * it also takes the errors produced by other units and returns an appropriate error message
  * 
  * @author Ding Shen Tan, Pablo MINO
  */
@@ -200,25 +200,14 @@ public class GUI extends JFrame{
             		try {
             			graph.emptyGraph();
             			Parser.parse(file1Field.getText(),graph);
-                		System.out.println(graph.toString());
-            			result = Sorter.sort(graph);
+            			result = graph.toString()+"\n";
+            			result += "A Topological Sort possible:\n\n"+Sorter.sort(graph)+"\n";
             			appendResult(result);
             		} catch (Exception ex) {
             			ex.printStackTrace();
             			result = ex.getMessage();
             			appendError(result);
             		}
-            		
-            		// Error interpretation
-            	/*	if (result.equals("!01")){
-            			result = "Error !01: File was not found on the specified location";
-            		} else if (result.equals("!02")){
-            			result= "Error !02: A line in the input file does not obey the specified format";
-            		} else if (result.equals("!03")){
-            			result = "Error !03: The suggested finite partial order contains a cyclic reference";
-            		} else {
-            			result = Sorter.sort(graph);
-            		}*/
             		
             		outputTextArea.setText(result);
             	}
@@ -233,31 +222,20 @@ public class GUI extends JFrame{
             		try {
             			graph.emptyGraph();
             			Parser.parse(file1Field.getText(),graph);
+            			result = graph.toString()+"\n";
             			String[] value = Parser.parse2(file2Field.getText(), graph);
-                		outputTextArea.setText(value.toString());
-            			result = ((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
+                		result += "The topological sort suggesteded:\n\n";
+            			for(int i=0; i<value.length; i++)
+            			{
+            				result += value[i] + "\n";
+            			}
+                		result += "\nResult: "+((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
             			appendResult(result);
             		} catch (Exception ex) {
             			ex.printStackTrace();
             			result = ex.getMessage();
             			appendError(result);
             		}
-            		
-            	/*	System.out.println("You clicked run!");
-            		String result = Parser.parse(graph, file1Field.getText());
-            		
-            		// Error interpretation
-            		if (result.equals("!01")){
-            			result = "Error !01: File was not found on the specified location";
-            		} else if (result.equals("!02")){
-            			result= "Error !02: A line in the input file does not obey the specified format";
-            		} else if (result.equals("!03")){
-            			result = "Error !03: The suggested finite partial order contains a cyclic reference";
-            		} else {
-            			result = Sorter.sort(graph);
-            		}
-            	*/
-            	
             		outputTextArea.setText(result);
             	
             	}
@@ -328,40 +306,6 @@ public class GUI extends JFrame{
 		 */
 		
 	    GUI myUI = new GUI();
-		
-		/** Asking for file path */
-		//Scanner sc = new Scanner(System.in);
-		//System.out.println("Enter file path or file name :");
-		//String fName = sc.nextLine();
-		
-		//String result = Parser.parse(graph, fName);
-		
-		/*
-		// Error interpretation
-		if (result.equals("!01")){
-			result = "Error !01: File was not found on the specified location";
-		} else if (result.equals("!02")){
-			result= "Error !02: A line in the input file does not obey the specified format";
-		} else if (result.equals("!03")){
-			result = "Error !03: The suggested finite partial order contains a cyclic reference";
-		} else {
-			result = Sorter.sort(graph);
-		}
-		
-		System.out.println(result);
-		
-		if(result.startsWith("Error"))
-		{
-			try { 
-				FileWriter outFile = new FileWriter("errlog.txt", false); 
-				PrintWriter out = new PrintWriter(outFile);
-				out.write(result);
-				out.close(); 
-			} catch (IOException e) { 
-				System.out.println("Error !04: Error couldn't be output to text file");
-			} 
-		}
-		*/
 		
 	}
 }

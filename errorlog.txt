@@ -1,0 +1,2 @@
+2011.10.27 AD at 01:19:22 EST
+The values parsed from the file do not obey the standard format for Sequence of Values

@@ -19,7 +19,7 @@ import java.util.Date;
 
 import javax.swing.*;
 
-public class UI extends JFrame{
+public class GUI extends JFrame{
 	
 	  /**
 	   * The members.
@@ -59,7 +59,7 @@ public class UI extends JFrame{
 	  /**
 	   * The constructor.
 	   */
-	  public UI()
+	  public GUI()
 	  {
 		super("Topological Sorter");
 		
@@ -117,6 +117,11 @@ public class UI extends JFrame{
                 System.out.println("You choose mode 1");
                 
                 middle2Panel.setVisible(false);
+        		if(file1Field.getText().length()>0)
+        		{
+        			runButton.setEnabled(true);
+        		}
+    			runButton.setEnabled(true);
             }
         });  
 	    
@@ -131,7 +136,12 @@ public class UI extends JFrame{
                 System.out.println("You choose mode 2");
                 
                 middle2Panel.setVisible(true);
-
+                if(file2Field.getText().length()>0)
+        		{
+        			runButton.setEnabled(true);
+        		}else{
+        			runButton.setEnabled(false);
+        		}
             }
         }); 
 	    
@@ -140,13 +150,19 @@ public class UI extends JFrame{
  
             public void actionPerformed(ActionEvent e)
             {
-            	int returnVal = file1Chooser.showOpenDialog(UI.this);
+            	int returnVal = file1Chooser.showOpenDialog(GUI.this);
 
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     
                 	file1Field.setText(file1Chooser.getSelectedFile().getAbsolutePath());
                 	System.out.println("You choose file " + file1Chooser.getSelectedFile().getAbsolutePath());
                 	
+                	if(mode == 2 && file2Field.getText().length()==0)
+                	{
+                		runButton.setEnabled(false);
+                	}else{
+                		runButton.setEnabled(true);
+                	}
                 }
             }
         }); 
@@ -156,13 +172,19 @@ public class UI extends JFrame{
  
             public void actionPerformed(ActionEvent e)
             {
-            	int returnVal = file2Chooser.showOpenDialog(UI.this);
+            	int returnVal = file2Chooser.showOpenDialog(GUI.this);
 
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     
                 	file2Field.setText(file2Chooser.getSelectedFile().getAbsolutePath());
                 	System.out.println("You choose file " + file2Chooser.getSelectedFile().getAbsolutePath());
                 	
+                	if(file1Field.getText().length()==0)
+                	{
+                		runButton.setEnabled(false);
+                	}else{
+                		runButton.setEnabled(true);
+                	}
                 }
             }
         }); 
@@ -241,6 +263,7 @@ public class UI extends JFrame{
             	}
             }
         });
+	    runButton.setEnabled(false);
 	  }
 
 	  /* BEGIN Allan */
@@ -304,7 +327,7 @@ public class UI extends JFrame{
 		/** Create the UI
 		 */
 		
-	    UI myUI = new UI();
+	    GUI myUI = new GUI();
 		
 		/** Asking for file path */
 		//Scanner sc = new Scanner(System.in);

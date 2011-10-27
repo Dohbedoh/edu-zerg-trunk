@@ -282,8 +282,6 @@ public class Graph implements GraphI{
 
 	@Override
 	public void emptyGraph() {
-		nodes = new NodeI[50];
-		edges = new int [50][50];
 		for(int i=0; i<size; i++)
 		{
 			nodes[i] = null;

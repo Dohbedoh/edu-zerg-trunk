@@ -114,7 +114,7 @@ public class GraphTest {
 			// TODO Auto-generated catch block
 			caughtE = true;
 			e.printStackTrace();
-			assertEquals("Error !03: The suggested finite partial order contains a cyclic reference", e.getMessage());
+			assertEquals("Graph Error: The suggested finite partial order contains a cyclic reference", e.getMessage());
 		}
 		
 		if (!caughtE) {

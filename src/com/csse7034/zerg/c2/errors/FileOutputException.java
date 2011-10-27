@@ -6,7 +6,7 @@ public class FileOutputException extends SorterException{
 
 	public FileOutputException(String filepath){
 		super();
-		this.errorMessage = "File Output Error: File could not be output";
+		this.errorMessage = "File Output Error: File could not be output: '" + filepath +"'";
 	}
 
 }

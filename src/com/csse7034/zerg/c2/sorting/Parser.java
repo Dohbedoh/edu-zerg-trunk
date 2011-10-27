@@ -37,15 +37,16 @@ public class Parser {
 			String line = "";
 			String parentAndChild[];
 			String allTheChildren[];
+			int lineCount1 = 0;
 
 			while ((line = br.readLine()) != null) {
-
+				lineCount1++;
 				// If it is an invalid line.
 				if (!line.contains(":")) {
 					// If the line is not an empty line
 					if (line.length() != 0) {
 						//return "!02";
-						throw new IncorrectFileFormatException();
+						throw new IncorrectFileFormatException(line, lineCount1);
 					}
 				}
 
@@ -69,7 +70,7 @@ public class Parser {
 						// and finding characters other than the ones in the specification
 						//System.out.println("Failed Here 1 , " + parentAndChild[0]);
 						//return "!02";
-						throw new IncorrectFileFormatException();
+						throw new IncorrectFileFormatException(line, lineCount1);
 					}
 
 					// get the rest of the value name
@@ -105,7 +106,7 @@ public class Parser {
 							// and finding characters other than the ones in the specification
 							//System.out.println("Failed Here 3");
 							//return "!02";
-							throw new IncorrectFileFormatException();
+							throw new IncorrectFileFormatException(line, lineCount1);
 						}
 					}
 
@@ -151,15 +152,16 @@ public class Parser {
 		
 			try {
 				BufferedReader br2 = new BufferedReader(new FileReader(new File(filePath2)));
-				
+				int lineCount2 = 0;
 				int i = 0;
 				while ((curLine = br2.readLine()) != null) {
+					lineCount2++;
 					if (curLine.length() != 0) {
 						if (g.contains(curLine.trim())) {
 							compList[i] = curLine.trim();
 							i++;
 						} else {
-							throw new NoSuchNodeException();
+							throw new NoSuchNodeException(curLine);
 						}
 					}
 				}
@@ -172,7 +174,7 @@ public class Parser {
 						
 						if (k != j) {
 							if ( current.equals(next) ) {
-								throw new IncorrectFileFormatException();
+								throw new IncorrectFileFormatException(curLine, lineCount2);
 							}
 						}
 					}

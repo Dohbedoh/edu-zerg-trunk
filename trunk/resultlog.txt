@@ -164,3 +164,79 @@ B
 A
 
 
+-----------------------------
+2011.10.27 AD at 05:10:01 EST
+C:\Documents and Settings\s4246769\My Documents\test2.txt
+C:\Documents and Settings\s4246769\My Documents\testResult2-2.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+The topological sort suggested:
+
+D
+B
+C
+A
+
+Result: The sequence is valid
+-----------------------------
+2011.10.27 AD at 05:16:05 EST
+C:\Documents and Settings\s4246769\My Documents\test2.txt
+C:\Documents and Settings\s4246769\My Documents\testResult2-2.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+The topological sort suggested:
+
+D
+B
+C
+A
+
+Result: The sequence is valid
+-----------------------------
+2011.10.27 AD at 05:16:06 EST
+C:\Documents and Settings\s4246769\My Documents\test2.txt
+C:\Documents and Settings\s4246769\My Documents\testResult2-2.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+The topological sort suggested:
+
+D
+B
+C
+A
+
+Result: The sequence is valid
+-----------------------------
+2011.10.27 AD at 05:16:06 EST
+C:\Documents and Settings\s4246769\My Documents\test2.txt
+C:\Documents and Settings\s4246769\My Documents\testResult2-2.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+The topological sort suggested:
+
+D
+B
+C
+A
+
+Result: The sequence is valid

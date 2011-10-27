@@ -1,18 +1,11 @@
 package com.csse7034.zerg.c2.errors;
 
-public class CyclicGraphException extends Exception{
+public class CyclicGraphException extends SorterException{
 
 private static final long serialVersionUID = 1L;
-	
-	String errorMessage;
-	
+
 	public CyclicGraphException(){
 		super();
-		this.errorMessage = "Error !03: The suggested finite partial order contains a cyclic reference";
+		this.errorMessage = "Graph Error: The suggested finite partial order contains a cyclic reference";
 	}
-	
-	public String getMessage(){
-		return errorMessage;		
-	}
-	
 }

@@ -131,6 +131,7 @@ public class GUI extends JFrame{
         			runButton.setEnabled(true);
         		} else {
         			runButton.setEnabled(false);
+        			statusTextArea.setBackground(Color.GRAY);
         		}
             }
         });  
@@ -151,6 +152,7 @@ public class GUI extends JFrame{
         			runButton.setEnabled(true);
         		}else{
         			runButton.setEnabled(false);
+        			statusTextArea.setBackground(Color.GRAY);
         		}
             }
         }); 

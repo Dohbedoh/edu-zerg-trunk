@@ -26,8 +26,8 @@ public class Parser {
 	 * @param g
 	 *            The created empty Graph object
 	 * @param filePath
-	 *            The file path of the
-	 * @return Graph A filled graph.
+	 *            The file path
+	 * @return 
 	 */
 	public static void parse(String filePath, GraphI graph)
 			throws SorterException {
@@ -201,7 +201,7 @@ public class Parser {
 					}
 				}
 			}
-
+			br2.close();
 		} catch (IOException ex) {
 			// System.out.println(ex.getStackTrace());
 			ex.printStackTrace();

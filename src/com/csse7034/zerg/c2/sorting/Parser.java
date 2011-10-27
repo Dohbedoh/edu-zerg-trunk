@@ -127,6 +127,7 @@ public class Parser {
 
 				}
 			}
+			br.close();
 		} catch (IOException ex) {
 			// System.out.println(ex.getStackTrace());
 			// ex.printStackTrace();

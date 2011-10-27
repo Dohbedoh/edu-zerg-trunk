@@ -19,3 +19,118 @@ File Parsing Error: The values parsed from the file 'C:\Documents and Settings\s
 -----------------------------
 2011.10.27 AD at 04:54:28 EST
 File Format Error: The line 1 in the input file does not obey the specified format: 'C:\Documents and Settings\s4246769\My Documents\spaceAndTabTestResult2-1.txt'
+-----------------------------
+2011.10.27 AD at 05:23:24 EST
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+Graph Error: Node 'A: B' does not exist in the Graph
+-----------------------------
+2011.10.27 AD at 05:23:52 EST
+Graph Error: The suggested finite partial order contains a cyclic reference
+-----------------------------
+2011.10.27 AD at 05:24:10 EST
+File Parsing Error: The values parsed from the file 'C:\Documents and Settings\s4246769\My Documents\invalidCharacters.txt' does not obey the standard format for Sequence of Values at line 3
+-----------------------------
+2011.10.27 AD at 05:24:18 EST
+File Parsing Error: The values parsed from the file 'C:\Documents and Settings\s4246769\My Documents\invalidCharacters.txt' does not obey the standard format for Sequence of Values at line 3
+-----------------------------
+2011.10.27 AD at 05:24:23 EST
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+Graph Error: Node 'Error !01: File was not found on the specified location' does not exist in the Graph
+-----------------------------
+2011.10.27 AD at 05:24:50 EST
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+Graph Error: Node 'Error !01: File was not found on the specified location' does not exist in the Graph
+-----------------------------
+2011.10.27 AD at 05:24:52 EST
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+Graph Error: Node 'Error !01: File was not found on the specified location' does not exist in the Graph
+-----------------------------
+2011.10.27 AD at 05:25:50 EST
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+Graph Error: Node 'Error !01: File was not found on the specified location' does not exist in the Graph

@@ -6,7 +6,7 @@ public class FileInputException extends SorterException{
 
 	public FileInputException(String filepath){
 		super();
-		this.errorMessage = "File Input Error: Cannot open/read the file input at '"+filepath+"'";
+		this.errorMessage = "File Input Error: Cannot open/read the file input: '"+filepath+"'";
 	}
 	
 }

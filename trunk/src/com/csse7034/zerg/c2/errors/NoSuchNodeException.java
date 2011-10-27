@@ -4,8 +4,8 @@ public class NoSuchNodeException extends SorterException{
 	
 	private static final long serialVersionUID = 1L;
 	
-	public NoSuchNodeException(){
+	public NoSuchNodeException(String node){
 		super();
-		this.errorMessage = "Values in file 2 and file 1 do not match";
+		this.errorMessage = "Graph Error: Node '"+node+"' does not exist in the Graph";
 	}
 }

@@ -42,6 +42,8 @@ public class GUI extends JFrame{
 	  
 	  JButton runButton = new JButton("Run");
 	  
+	  JTextArea statusTextArea = new JTextArea(1,1);
+	  
 	  JLabel file1Label = new JLabel("File 1");
 	  JTextField file1Field = new JTextField(50);
 	  JFileChooser file1Chooser = new JFileChooser();
@@ -52,7 +54,7 @@ public class GUI extends JFrame{
 	  JFileChooser file2Chooser = new JFileChooser();
 	  JButton file2Button = new JButton("Open File");
 	  
-	  JTextArea outputTextArea = new JTextArea(20, 30);
+	  JTextArea outputTextArea = new JTextArea(16, 30);
 	  JScrollPane bottomPanel = new JScrollPane(outputTextArea);
 	  
 	  
@@ -69,6 +71,13 @@ public class GUI extends JFrame{
 	    topPanel.add(mode1Radio);
 	    topPanel.add(mode2Radio);
 	    topPanel.add(runButton);
+	    
+	    // Status button - DS
+	    topPanel.add(statusTextArea);
+	    
+	    statusTextArea.setBackground(Color.GRAY);
+	    statusTextArea.setEditable(false);
+	    // End Status button
 	    
 	    middle1Panel.setLayout(new FlowLayout());
 	    middle1Panel.add(file1Label);
@@ -120,8 +129,9 @@ public class GUI extends JFrame{
         		if(file1Field.getText().length()>0)
         		{
         			runButton.setEnabled(true);
+        		} else {
+        			runButton.setEnabled(false);
         		}
-    			runButton.setEnabled(true);
             }
         });  
 	    
@@ -202,14 +212,16 @@ public class GUI extends JFrame{
             			Parser.parse(file1Field.getText(),graph);
             			result = graph.toString()+"\n";
             			result += "A Topological Sort possible:\n\n"+Sorter.sort(graph)+"\n";
+            			statusTextArea.setBackground(Color.GREEN);
             			appendResult(result);
             		} catch (Exception ex) {
             			ex.printStackTrace();
             			result = ex.getMessage();
+            			statusTextArea.setBackground(Color.RED);
             			appendError(result);
             		}
             		
-            		outputTextArea.setText(result);
+            		outputTextArea.setText(result.trim());
             	}
             	else{
             		/* *
@@ -223,20 +235,37 @@ public class GUI extends JFrame{
             			graph.emptyGraph();
             			Parser.parse(file1Field.getText(),graph);
             			result = graph.toString()+"\n";
-            			String[] value = Parser.parse2(file2Field.getText(), graph);
-                		result += "The topological sort suggesteded:\n\n";
-            			for(int i=0; i<value.length; i++)
-            			{
-            				result += value[i] + "\n";
+            			// Field 2 check missing - Fixed by DS
+            			if (file2Field.getText().length() > 0) {
+		            			String[] value = Parser.parse2(file2Field.getText(), graph);
+		                		result += "The topological sort suggested:\n\n";
+		            			for(int i=0; i<value.length; i++)
+		            			{
+		            				result += value[i] + "\n";
+		            			}
+		                		result += "\nResult: "+((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
+		                		
+		                		// Extra stuff
+		                		
+		                		if (Sorter.compare(graph, value)) {
+		                			statusTextArea.setBackground(Color.GREEN);
+		                		} else {
+		                			statusTextArea.setBackground(Color.RED);
+		                		}
+		                		// End extra stuff
+		                		
+		            			appendResult(result);
+            			} else {
+            				result = "Both files are required.";
+            				statusTextArea.setBackground(Color.RED);
             			}
-                		result += "\nResult: "+((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
-            			appendResult(result);
             		} catch (Exception ex) {
             			ex.printStackTrace();
             			result = ex.getMessage();
+            			statusTextArea.setBackground(Color.RED);
             			appendError(result);
             		}
-            		outputTextArea.setText(result);
+            		outputTextArea.setText(result.trim());
             	
             	}
             }
@@ -244,7 +273,7 @@ public class GUI extends JFrame{
 	    runButton.setEnabled(false);
 	  }
 
-	  /* BEGIN Allan */
+	  /* BEGIN Allan */ // O-kay.
 	  
 	  private void appendError(String message)
 	  {
@@ -264,6 +293,7 @@ public class GUI extends JFrame{
 				out.close(); 
 			} catch (IOException e) { 
 				outputTextArea.setText("Error couldn't be output to text file");
+				statusTextArea.setBackground(Color.RED);
 			} 
 	  }
 	  
@@ -290,6 +320,7 @@ public class GUI extends JFrame{
 				out.close(); 
 			} catch (IOException e) { 
 				outputTextArea.setText("Error couldn't be output to text file");
+				statusTextArea.setBackground(Color.RED);
 			} 
 	  }
 

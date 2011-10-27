@@ -27,7 +27,7 @@ public class Parser {
 	 * @param filePath	The file path of the 
 	 * @return Graph A filled graph.
 	 */
-	public static void parse(String filePath, GraphI graph) throws Exception{
+	public static void parse(String filePath, GraphI graph) throws SorterException{
 
 		String CharFromSet = "[[A-Za-z0-9]|[-\\+@#\\$%\\^&\\*|<>\\?]]*";
 
@@ -45,7 +45,7 @@ public class Parser {
 					// If the line is not an empty line
 					if (line.length() != 0) {
 						//return "!02";
-						throw new FinitePartialOrderException();
+						throw new IncorrectFileFormatException();
 					}
 				}
 
@@ -69,7 +69,7 @@ public class Parser {
 						// and finding characters other than the ones in the specification
 						//System.out.println("Failed Here 1 , " + parentAndChild[0]);
 						//return "!02";
-						throw new FinitePartialOrderException();
+						throw new IncorrectFileFormatException();
 					}
 
 					// get the rest of the value name
@@ -88,7 +88,7 @@ public class Parser {
 							//String err = graph.addEdge(parentAndChild[0], allTheChildren[i]);
 							try {
 								graph.addEdge(parentAndChild[0], allTheChildren[i]);
-							} catch (CyclicGraphException cge) {		
+							} catch (SorterException cge) {		
 								throw cge;
 							}
 
@@ -105,18 +105,18 @@ public class Parser {
 							// and finding characters other than the ones in the specification
 							//System.out.println("Failed Here 3");
 							//return "!02";
-							throw new FinitePartialOrderException();
+							throw new IncorrectFileFormatException();
 						}
 					}
 
 				}
 			}
-		} catch (Exception ex) {
+		} catch (IOException ex) {
 			//System.out.println(ex.getStackTrace());
 			//ex.printStackTrace();
 			//return "!01";
 			//throw new FileNotFoundException("Error !01: File was not found on the specified location");
-			throw ex;
+			throw new FileInputException(filePath);
 		}
 	}
 
@@ -128,7 +128,7 @@ public class Parser {
 	 * @return	String[]	A String list containing individual nodes
 	 */
 	
-	public static String[] parse2(String filePath2, Graph g) throws Exception{
+	public static String[] parse2(String filePath2, Graph g) throws SorterException{
 		
 		//Initialising Variables
 		String line;
@@ -172,7 +172,7 @@ public class Parser {
 						
 						if (k != j) {
 							if ( current.equals(next) ) {
-								throw new FinitePartialOrderException();
+								throw new IncorrectFileFormatException();
 							}
 						}
 					}

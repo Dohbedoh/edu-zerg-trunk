@@ -1,2 +1,30 @@
 2011.10.27 AD at 01:19:22 EST
 The values parsed from the file do not obey the standard format for Sequence of Values
+2011.10.27 AD at 04:06:58 EST
+File Parsing Error: The values parsed from the file '7: !, @, #' does not obey the standard format for Sequence of Values at line 3
+2011.10.27 AD at 04:09:56 EST
+Graph Error: The suggested finite partial order contains a cyclic reference
+2011.10.27 AD at 04:10:05 EST
+File Parsing Error: The values parsed from the file 'C:\Documents and Settings\s4246769\My Documents\invalidCharacters.txt' does not obey the standard format for Sequence of Values at line 3
+2011.10.27 AD at 04:10:44 EST
+File Parsing Error: The values parsed from the file 'C:\Documents and Settings\s4246769\My Documents\resultlog.txt' does not obey the standard format for Sequence of Values at line 1
+2011.10.27 AD at 04:11:01 EST
+File Format Error: The line 1 in the input file does not obey the specified format: 'D'
+2011.10.27 AD at 04:12:35 EST
+File Parsing Error: The values parsed from the file 'C:\Documents and Settings\s4246769\My Documents\invalidCharacters.txt' does not obey the standard format for Sequence of Values at line 3
+2011.10.27 AD at 04:12:46 EST
+File Format Error: The line 1 in the input file does not obey the specified format: 'D'
+2011.10.27 AD at 04:13:18 EST
+File Format Error: The line 1 in the input file does not obey the specified format: 'D'
+2011.10.27 AD at 04:14:10 EST
+File Format Error: The line 1 in the input file does not obey the specified format: 'C:\Documents and Settings\s4246769\My Documents\spaceAndTabTestResult2-1.txt'
+2011.10.27 AD at 04:14:48 EST
+50
+2011.10.27 AD at 04:14:56 EST
+50
+2011.10.27 AD at 04:15:32 EST
+50
+2011.10.27 AD at 04:15:55 EST
+File Format Error: The line 1 in the input file does not obey the specified format: 'C:\Documents and Settings\s4246769\My Documents\testResult2Incorrect3.txt'
+2011.10.27 AD at 04:16:09 EST
+50

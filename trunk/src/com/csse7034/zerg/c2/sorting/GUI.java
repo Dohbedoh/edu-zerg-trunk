@@ -98,7 +98,8 @@ public class GUI extends JFrame{
 	    mainPanel.add(middle1Panel);
 	    mainPanel.add(middle2Panel);
 
-	    outputTextArea.setMargin(new Insets(10, 10, 10, 10)); 
+	    outputTextArea.setMargin(new Insets(10, 10, 10, 10));
+	    outputTextArea.setLineWrap(true);
 	    //mainPanel.add(outputTextArea);
 	    mainPanel.add(bottomPanel);
 	    

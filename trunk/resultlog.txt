@@ -163,3 +163,4723 @@ B
 A
 
 Result: The sequence is valid
+2011.10.27 AD at 04:06:47 EST
+C:\Documents and Settings\s4246769\My Documents\test2.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+A Topological Sort possible:
+
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:08:41 EST
+C:\Documents and Settings\s4246769\My Documents\test2.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+A Topological Sort possible:
+
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:08:44 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:08:48 EST
+C:\Documents and Settings\s4246769\My Documents\test2Incorrect.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): EE
+D(2): 
+EE(2): 
+
+A Topological Sort possible:
+
+EE
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:10:33 EST
+C:\Documents and Settings\s4246769\My Documents\normalFlow.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): IJ
+Z(11): 
+I(6): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): Z
+
+A Topological Sort possible:
+
+Z
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:10:53 EST
+C:\Documents and Settings\s4246769\My Documents\spaceAndTabs.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+A Topological Sort possible:
+
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:14:38 EST
+C:\Documents and Settings\s4246769\My Documents\twoSequences.txt
+Graph Representation:
+
+A(0): BC
+B(1): D
+C(1): D
+D(2): 
+
+A Topological Sort possible:
+
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:14:42 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:15:42 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:47 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:48 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:49 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:49 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:49 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:49 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:50 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:50 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:50 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:50 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:50 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:51 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:51 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:51 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:51 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:51 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:52 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:52 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:15:52 EST
+C:\Documents and Settings\s4246769\My Documents\test.txt
+Graph Representation:
+
+A(0): B
+B(1): C
+C(2): D
+D(3): EFHZ
+E(4): 
+F(4): HIW
+H(5): J
+Z(4): 
+I(5): 
+W(10): 
+J(6): KL
+K(7): 
+L(7): MN
+M(8): 
+N(8): Q
+Q(9): WXY
+X(10): 
+Y(10): 
+
+A Topological Sort possible:
+
+Y
+X
+W
+Q
+N
+M
+L
+K
+J
+I
+H
+Z
+F
+E
+D
+C
+B
+A
+
+
+2011.10.27 AD at 04:16:01 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:26 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:27 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:28 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:28 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:29 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:30 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:30 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:30 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:30 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:30 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:30 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:31 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:31 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+A Topological Sort possible:
+
+?
+>
+<
+|
+*
+&
+^
+%
+$
+#
+@
++
+-
+0
+9
+8
+7
+6
+5
+4
+3
+2
+1
+z
+y
+x
+w
+v
+u
+t
+s
+r
+q
+p
+o
+n
+m
+l
+k
+j
+i
+h
+g
+f
+e
+d
+c
+b
+a
+Z
+Y
+X
+W
+V
+U
+T
+S
+R
+Q
+P
+O
+N
+M
+L
+K
+J
+I
+H
+G
+F
+E
+D
+C
+B
+A
+SPECIAL-CHARACTERS
+NUMBERS
+UNDERSCORE
+UPPERSCORE
+VALID-CHARACTERS
+
+
+2011.10.27 AD at 04:18:35 EST
+C:\Documents and Settings\s4246769\My Documents\validCharacters.txt
+C:\Documents and Settings\s4246769\My Documents\testResult2Incorrect.txt
+Graph Representation:
+
+VALID-CHARACTERS(0): UPPERSCOREUNDERSCORENUMBERSSPECIAL-CHARACTERS
+UPPERSCORE(1): ABCDEFGHIJKLMNOPQRSTUVWXYZ
+UNDERSCORE(1): abcdefghijklmnopqrstuvwxyz
+NUMBERS(1): 1234567890
+SPECIAL-CHARACTERS(1): -+@#$%^&*|<>?
+A(2): 
+B(2): 
+C(2): 
+D(2): 
+E(2): 
+F(2): 
+G(2): 
+H(2): 
+I(2): 
+J(2): 
+K(2): 
+L(2): 
+M(2): 
+N(2): 
+O(2): 
+P(2): 
+Q(2): 
+R(2): 
+S(2): 
+T(2): 
+U(2): 
+V(2): 
+W(2): 
+X(2): 
+Y(2): 
+Z(2): 
+a(2): 
+b(2): 
+c(2): 
+d(2): 
+e(2): 
+f(2): 
+g(2): 
+h(2): 
+i(2): 
+j(2): 
+k(2): 
+l(2): 
+m(2): 
+n(2): 
+o(2): 
+p(2): 
+q(2): 
+r(2): 
+s(2): 
+t(2): 
+u(2): 
+v(2): 
+w(2): 
+x(2): 
+y(2): 
+z(2): 
+1(2): 
+2(2): 
+3(2): 
+4(2): 
+5(2): 
+6(2): 
+7(2): 
+8(2): 
+9(2): 
+0(2): 
+-(2): 
++(2): 
+@(2): 
+#(2): 
+$(2): 
+%(2): 
+^(2): 
+&(2): 
+*(2): 
+|(2): 
+<(2): 
+>(2): 
+?(2): 
+
+The topological sort suggested:
+
+D
+C
+B
+E
+
+Result: The sequence is NOT valid

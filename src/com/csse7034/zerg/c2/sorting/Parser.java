@@ -50,7 +50,7 @@ public class Parser {
 					// If the line is not an empty line
 					if (line.length() != 0) {
 						// return "!02";
-						throw new IncorrectFileFormatException(filePath, lineCount1);
+						throw new FileFormatException(filePath, lineCount1);
 					}
 				}
 
@@ -77,7 +77,7 @@ public class Parser {
 						// System.out.println("Failed Here 1 , " +
 						// parentAndChild[0]);
 						// return "!02";
-						throw new SequenceOfValuesException(filePath, lineCount1);
+						throw new InvalidCharacterException(filePath, lineCount1);
 					}
 
 					// get the rest of the value name
@@ -120,7 +120,7 @@ public class Parser {
 							// specification
 							// System.out.println("Failed Here 3");
 							// return "!02";
-							throw new SequenceOfValuesException(filePath,
+							throw new InvalidCharacterException(filePath,
 									lineCount1);
 						}
 					}
@@ -196,7 +196,7 @@ public class Parser {
 
 					if (k != j) {
 						if (current.equals(next)) {
-							throw new IncorrectFileFormatException(filePath2,
+							throw new FileFormatException(filePath2,
 									lineCount2);
 						}
 					}

@@ -20,6 +20,8 @@ import java.util.Date;
 
 import javax.swing.*;
 
+import com.csse7034.zerg.c2.errors.SorterException;
+
 public class GUI extends JFrame{
 
 	/**
@@ -128,9 +130,6 @@ public class GUI extends JFrame{
 			{
 				mode = 1;
 				mode2Radio.setSelected(false);
-				//Execute when button is pressed
-				System.out.println("You choose mode 1");
-
 				middle2Panel.setVisible(false);
 				if(file1Field.getText().length()>0)
 				{
@@ -149,9 +148,6 @@ public class GUI extends JFrame{
 			{
 				mode = 2;
 				mode1Radio.setSelected(false);
-				//Execute when button is pressed
-				System.out.println("You choose mode 2");
-
 				middle2Panel.setVisible(true);
 				if(file2Field.getText().length()>0)
 				{
@@ -222,7 +218,7 @@ public class GUI extends JFrame{
 						result += "A Topological Sort possible:\n\n"+Sorter.sort(graph)+"\n";
 						statusTextArea.setBackground(Color.GREEN);
 						appendResult(result);
-					} catch (Exception ex) {
+					} catch (SorterException ex) {
 						ex.printStackTrace();
 						result = ex.getMessage();
 						statusTextArea.setBackground(Color.RED);
@@ -267,7 +263,7 @@ public class GUI extends JFrame{
 							result = "Both files are required.";
 							statusTextArea.setBackground(Color.RED);
 						}
-					} catch (Exception ex) {
+					} catch (SorterException ex) {
 						ex.printStackTrace();
 						result += ex.getMessage();
 						statusTextArea.setBackground(Color.RED);

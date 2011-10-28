@@ -18,7 +18,7 @@ public class NoSuchNodeException extends SorterException{
 	 * @param The proposed node by the sequence of value file
 	 * @return The message stored within the exception
 	 */
-	public NoSuchNodeException(String node){
+	public NoSuchNodeException(final String node){
 		super();
 		this.errorMessage = "Error 06: Node '"+node+"' does not exist in the graph";
 	}

@@ -16,16 +16,16 @@ public class Graph implements GraphI{
 
 	/** Array of all nodes in the graph */
 	private NodeI [] nodes;
-	
+
 	/** Matrix that represents the graph*/
 	private int [][] edges;
-	
+
 	/** The size of the graph or the number of node */
 	private int size;
-	
+
 	/** Array of all nodes that have been visited (cycle detection)*/
 	private boolean[] visited;
-	
+
 	public Graph()
 	{
 		size = 0;
@@ -39,13 +39,13 @@ public class Graph implements GraphI{
 			}
 		}
 	}
-	
+
 	/**
 	 * Find the maximum level of a node in the Graph
 	 * @param node	The index of the node
 	 * @return the maximum level of the node
 	 */
-	private int findLevel(int node)
+	private int findLevel(final int node)
 	{
 		int max = 0;
 		for(int i=0; i<size; i++)
@@ -57,14 +57,14 @@ public class Graph implements GraphI{
 		}
 		return max+1;
 	}
-	
+
 	/**
 	 * Adjust the level of the nodes in the graph, starting from a particular node whose
 	 * the level is known
 	 * @param node		node from which the levelling start
 	 * @param level		the max level of the node
 	 */
-	private void adjustLevelFrom(int node, int level)
+	private void adjustLevelFrom(final int node, final int level)
 	{
 		for(int i=0; i<size; i++)
 		{
@@ -72,7 +72,7 @@ public class Graph implements GraphI{
 			{
 				if(nodes[node].getLevel()>nodes[i].getLevel())
 				{
-					int newLevel = findLevel(i);
+					final int newLevel = findLevel(i);
 					nodes[i].setLevel(newLevel);
 					adjustLevelFrom(i,newLevel);
 				}else{
@@ -85,14 +85,14 @@ public class Graph implements GraphI{
 			}
 		}
 	}
-	
+
 	/**
 	 * Return if the graph contains a cycle between a node source and a node destination
 	 * @param src		The source node
 	 * @param dest		The destination node
 	 * @return			The graph contains a cycle
 	 */
-	private boolean containsCycle(int src, int dest)
+	private boolean containsCycle(final int src, final int dest)
 	{
 		visited = new boolean[size];
 		for (int i = 0; i < size; i++) {
@@ -111,14 +111,14 @@ public class Graph implements GraphI{
 		}
 		return false;
 	}
-	
-	
+
+
 	/**
 	 * Find if a node has already been visited (during the cycle detection)
 	 * @param node		The node to test
 	 * @return			The node has already been visited
 	 */
-	private boolean visit(int node)
+	private boolean visit(final int node)
 	{
 		visited[node] = true;
 		for(int i=0; i<size; i++)
@@ -144,8 +144,8 @@ public class Graph implements GraphI{
 	 */
 	private void resize()
 	{
-		NodeI[] tempNodes = new NodeI[nodes.length*2];
-		int [][] tempEdges = new int [nodes.length*2][nodes.length*2];
+		final NodeI[] tempNodes = new NodeI[nodes.length*2];
+		final int [][] tempEdges = new int [nodes.length*2][nodes.length*2];
 		for(int i=0; i<size; i++)
 		{
 			tempNodes[i] = nodes[i];
@@ -166,7 +166,7 @@ public class Graph implements GraphI{
 	}
 
 	@Override
-	public void addNode(String name) {
+	public void addNode(final String name) {
 		if(size==nodes.length)
 		{
 			resize(); 
@@ -177,7 +177,7 @@ public class Graph implements GraphI{
 
 
 	@Override
-	public void addEdge(String src, String dest) throws CyclicGraphException{
+	public void addEdge(final String src, final String dest) throws CyclicGraphException{
 		if(src!=dest)
 		{
 			int indSrc=-1, indDest=-1, i=0;
@@ -209,7 +209,7 @@ public class Graph implements GraphI{
 
 			edges[indSrc][indDest] = 1;
 			edges[indDest][indSrc] = -1;
-			
+
 			/**
 			 * Exception 03
 			 */
@@ -221,11 +221,11 @@ public class Graph implements GraphI{
 			{
 				return("!03");
 			}*/
-			
-			int levelDest = findLevel(indDest);
+
+			final int levelDest = findLevel(indDest);
 			nodes[indDest].setLevel(levelDest);
 			adjustLevelFrom(indDest,levelDest);
-			
+
 			//return ("ok");
 		}else{
 			/**
@@ -248,13 +248,13 @@ public class Graph implements GraphI{
 	}
 
 	@Override
-	public NodeI getNode(String name) {
+	public NodeI getNode(final String name) {
 		return nodes[indexOf(name)];
 	}
 
 	@Override
-	public NodeI[] getNodesAtLevel(int level) {
-		Vector<NodeI> temp = new Vector<NodeI>();
+	public NodeI[] getNodesAtLevel(final int level) {
+		final Vector<NodeI> temp = new Vector<NodeI>();
 		for(int i=0; i<size; i++)
 		{
 			if(nodes[i].getLevel()==level)
@@ -262,7 +262,7 @@ public class Graph implements GraphI{
 				temp.add(nodes[i]);
 			}
 		}
-		NodeI [] res = new NodeI [temp.size()];
+		final NodeI [] res = new NodeI [temp.size()];
 		for(int i=0; i<temp.size(); i++)
 		{
 			res[i]=temp.get(i);
@@ -271,10 +271,10 @@ public class Graph implements GraphI{
 	}
 
 	@Override
-	public boolean contains(String name) {		
+	public boolean contains(final String name) {		
 		return indexOf(name)!=-1;
 	}
-	
+
 	@Override
 	public int size() {
 		return size;
@@ -292,9 +292,9 @@ public class Graph implements GraphI{
 		}
 		size = 0;
 	}
-	
+
 	@Override
-	public int indexOf(String name) {
+	public int indexOf(final String name) {
 		for(int i=0; i<size; i++)
 		{
 			if(nodes[i].getName().equals(name))
@@ -304,8 +304,8 @@ public class Graph implements GraphI{
 		}
 		return -1;
 	}
-	
-	
+
+
 	/**
 	 * Return a String representation of the graph
 	 * @return		A String representation of the Graph
@@ -313,7 +313,7 @@ public class Graph implements GraphI{
 	@Override
 	public String toString()
 	{
-		StringBuffer buffer = new StringBuffer("Graph Representation:\n\n");
+		final StringBuffer buffer = new StringBuffer("Graph Representation:\n\n");
 		for(int i=0; i<size; i++)
 		{	
 			buffer.append(nodes[i].getName() + "("+(nodes[i].getLevel())+"): ");

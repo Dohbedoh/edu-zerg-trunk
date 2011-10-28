@@ -23,7 +23,7 @@ public class Sorter {
 	 * @param g	the Graph containing the values of the given input
 	 * @return	output	A String output to be printed out unto the UI
 	 */
-	public static String sort(Graph g) {
+	public static String sort(final Graph g) {
 
 		//the variable to store output
 		String output = "";
@@ -33,13 +33,13 @@ public class Sorter {
 
 
 		//get the graph depth
-		int depth = graph.getDepth();
+		final int depth = graph.getDepth();
 
 		//loop through the graph by the level
 		for (int i=0; i<=depth; i++){
 
 			//loop through the graph to get all nodes at that level
-			for (NodeI n : graph.getNodesAtLevel(i)) {
+			for (final NodeI n : graph.getNodesAtLevel(i)) {
 
 				output = n.getName() + "\n" + output;
 
@@ -58,7 +58,7 @@ public class Sorter {
 	 * 			input file
 	 * @return	a boolean to show if the results are the same or not, true: same , false: not the same
 	 */
-	public static boolean compare(Graph g, String[] s){
+	public static boolean compare(final Graph g, final String[] s){
 
 		//assign the graph
 		graph = g;
@@ -70,11 +70,11 @@ public class Sorter {
 		{
 			return false;
 		}
-		
+
 		if(g.getNode(s[0]).getLevel()==0)
 		{
 			int currentLvl = g.getNode(s[0]).getLevel();
-			for(String temp : s) {
+			for(final String temp : s) {
 				if(g.getNode(temp).getLevel()<currentLvl) {
 					return false;
 				}
@@ -84,7 +84,7 @@ public class Sorter {
 			if(g.getNode(s[0]).getLevel()==g.getDepth())
 			{
 				int currentLvl = g.getNode(s[0]).getLevel();
-				for(String temp : s) {
+				for(final String temp : s) {
 					if(g.getNode(temp).getLevel()>currentLvl) {
 						return false;
 					}
@@ -95,7 +95,7 @@ public class Sorter {
 			}
 		}
 		return true;
-		
+
 	}
-	
+
 }

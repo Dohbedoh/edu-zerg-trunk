@@ -18,7 +18,7 @@ public class FileOutputException extends SorterException{
 	 * @param filepath The path of the file that is being read
 	 * @return The message stored within the exception
 	 */
-	public FileOutputException(String filepath){
+	public FileOutputException(final String filepath){
 		super();
 		this.errorMessage = "Error 02: File could not be output: '" + filepath +"'";
 	}

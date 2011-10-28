@@ -22,7 +22,7 @@ public class GraphTest {
 
 	/** Instance of graph for testing purposes */
 	GraphI testGraph;
-	
+
 	/**
 	 * Normal flow test:
 	 * The following test case will be used
@@ -35,42 +35,42 @@ public class GraphTest {
 	 */
 	@Test
 	public void normalFlow() {
-		
+
 		testGraph = new Graph();
-		
+
 		// Add node check, should not return errors
 		testGraph.addNode("A");
 		testGraph.addNode("B");
 		testGraph.addNode("C");
 		testGraph.addNode("D");
-		
+
 		// Add edge check, should return no error
 		try {
 			testGraph.addEdge("A", "B");		
 			testGraph.addEdge("A", "C");
 			testGraph.addEdge("B", "D");
 			testGraph.addEdge("C", "D");
-		} catch (CyclicGraphException e) {
+		} catch (final CyclicGraphException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
-		
+
 		// Depth check, should be 2
 		assertEquals(2,testGraph.getDepth());
-		
+
 		// Insertion check, should contain 4 nodes
 		assertTrue(testGraph.contains("A"));
 		assertTrue(testGraph.contains("B"));
 		assertTrue(testGraph.contains("C"));
 		assertTrue(testGraph.contains("D"));
-		
+
 		// Insertion check, indexes match the insertion order
 		assertTrue(testGraph.indexOf("A")==0);
 		assertTrue(testGraph.indexOf("B")==1);
 		assertTrue(testGraph.indexOf("C")==2);
 		assertTrue(testGraph.indexOf("D")==3);
-		
+
 		// toString() check, should return a representation of the nodes
 		// and its child, according to documentation:
 		// A: B(1)C(1)
@@ -78,7 +78,7 @@ public class GraphTest {
 		// C: D(2)
 		// D: 
 		System.out.println(testGraph.toString());
-		
+
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class GraphTest {
 	 */
 	@Test
 	public void cyclicError() {
-		
+
 		testGraph = new Graph();
 		boolean caughtE = false;
 		// Add node check, should not return errors
@@ -102,30 +102,30 @@ public class GraphTest {
 		testGraph.addNode("B");
 		testGraph.addNode("C");
 		testGraph.addNode("D");
-		
+
 		// Add edge check, should return no error
 		try {
 			testGraph.addEdge("A", "B");
 			testGraph.addEdge("B", "C");
 			testGraph.addEdge("C", "D");
 			testGraph.addEdge("D", "A");
-		} catch (CyclicGraphException e) {
+		} catch (final CyclicGraphException e) {
 			// TODO Auto-generated catch block
 			caughtE = true;
 			e.printStackTrace();
 			assertEquals("Graph Error: The suggested finite partial order contains a cyclic reference", e.getMessage());
 		}
-		
+
 		if (!caughtE) {
 			fail();
 		}
-		
+
 		//throwing null pointer exception instead, needs fix
 		//assertEquals("!03", testGraph.addEdge("D", "A"));
-		
-		
+
+
 	}
-	
+
 	/**
 	 * Graph length test:
 	 * The following test case will be used
@@ -146,9 +146,9 @@ public class GraphTest {
 	 */
 	@Test
 	public void graphLengthTest() {
-		
+
 		testGraph = new Graph();
-		
+
 		// Add node check, should not return errors
 		testGraph.addNode("A");
 		testGraph.addNode("B");
@@ -168,9 +168,9 @@ public class GraphTest {
 		testGraph.addNode("X");
 		testGraph.addNode("Y");
 		testGraph.addNode("Z");
-		
+
 		// Add edge check, should return no error
-				
+
 		try {
 			testGraph.addEdge("A", "B");
 			testGraph.addEdge("B", "C");
@@ -193,53 +193,53 @@ public class GraphTest {
 			testGraph.addEdge("Q", "X");
 			testGraph.addEdge("Q", "Y");
 			testGraph.addEdge("Y", "Z");
-		} catch (CyclicGraphException e) {
+		} catch (final CyclicGraphException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}		
-				
-	
+
+
 		// toString() check, should return a representation of the nodes
 		// and its child, according to documentation
 		//
 		System.out.println(testGraph.toString());
-		
+
 	}
-	
+
 	/**
 	 * Graph level test
 	 */
 	@Test
 	public void graphLevelTest() {
 		testGraph = new Graph();
-		
+
 		// Add node check, should not return errors
 		testGraph.addNode("A");
 		testGraph.addNode("B");
 		testGraph.addNode("C");
 		testGraph.addNode("D");
-		
+
 		// Add edge check, should return no error
 		try {
 			testGraph.addEdge("A", "B");
 			testGraph.addEdge("A", "C");
 			testGraph.addEdge("B", "D");
 			testGraph.addEdge("C", "D");
-		} catch (CyclicGraphException e) {
+		} catch (final CyclicGraphException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
-		
-		
+
+
 		NodeI[] node = testGraph.getNodesAtLevel(0);
 		System.out.println(testGraph.getDepth());
 		for (int i = 0; i < testGraph.getDepth(); i++) {
 			node = testGraph.getNodesAtLevel(i);
 			if (i == 0) {
-				for (int j = 0; j < node.length; j++) {
-					assertEquals("A", node[j].getName());
+				for (final NodeI element : node) {
+					assertEquals("A", element.getName());
 				}
 			} else if (i == 1) {
 				for (int j = 0; j < node.length; j++) {
@@ -250,8 +250,8 @@ public class GraphTest {
 					}
 				}
 			} else if (i == 2) {
-				for (int j = 0; j < node.length; j++) {
-					assertEquals("D", node[j].getName());
+				for (final NodeI element : node) {
+					assertEquals("D", element.getName());
 				}
 			}	
 		}

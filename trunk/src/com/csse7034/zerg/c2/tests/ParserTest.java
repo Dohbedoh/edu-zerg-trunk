@@ -20,7 +20,7 @@ import com.csse7034.zerg.c2.errors.CyclicGraphException;
 import com.csse7034.zerg.c2.errors.SequenceValueException;
 
 public class ParserTest {
-	
+
 	/**
 	 * Valid file format flow test:
 	 * The following test case will be used
@@ -31,21 +31,21 @@ public class ParserTest {
 	 */
 	@Test
 	public void validFile() {
-		Graph g = new Graph();
+		final Graph g = new Graph();
 		boolean caughtE = false;
 		try {
 			Parser.parse("normalFlow.txt", g);
-		} catch (FileFormatException fpoe) {
+		} catch (final FileFormatException fpoe) {
 			caughtE = true;
 			fail();
-		} catch (CyclicGraphException cge) {
+		} catch (final CyclicGraphException cge) {
 			caughtE = true;
 			fail();
-		} catch (SequenceValueException sove) {
+		} catch (final SequenceValueException sove) {
 			caughtE = true;
 			fail();
-		} catch (Exception ex) {
-			
+		} catch (final Exception ex) {
+
 		}
 		if (!caughtE) {
 			assertTrue(true);
@@ -53,7 +53,7 @@ public class ParserTest {
 			fail();
 		}
 	}
-	
+
 	/**
 	 * Incorrect line format flow test:
 	 * The following test case will be used
@@ -67,17 +67,17 @@ public class ParserTest {
 	@Test
 	public void incorrectFormat() {
 		boolean caught = false;
-		Graph g = new Graph();
+		final Graph g = new Graph();
 		try {
 			Parser.parse("invalidCharacters.txt", g);
-		} catch (SequenceValueException sove) {
+		} catch (final SequenceValueException sove) {
 			caught = true;
 			assertTrue(true);
-		} catch (FileFormatException fpoe) {
+		} catch (final FileFormatException fpoe) {
 			caught = true;
 			assertTrue(true);
-		} catch (Exception ex) {
-			
+		} catch (final Exception ex) {
+
 		}
 		if (!caught) {
 			fail();
@@ -95,52 +95,52 @@ public class ParserTest {
 	 */
 	@Test
 	public void missingFile() {
-		Graph g = new Graph();
+		final Graph g = new Graph();
 		try {
 			Parser.parse("noFile.txt", g);
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			assertTrue(true);
 		}
 	}
-	
+
 	/**
 	 * test for output of parse2()
 	 */
 	@Test
 	public void outputTest() {
 		String[] result;
-		Graph g = new Graph();
+		final Graph g = new Graph();
 		try {
 			Parser.parse("test2.txt", g);
 			result = Parser.parse2("testResult2-1.txt", g);
-			String[] correctResults = {"D", "C", "B", "A"};
-			
+			final String[] correctResults = {"D", "C", "B", "A"};
+
 			for (int i = 0; i < correctResults.length; i++) {
 				assertEquals(correctResults[i], result[i]);
 			}
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			fail();
 		}	
 	}
-	
+
 	/**
 	 * Tests for space and tabs in second result file
 	 */
 	@Test
 	public void spaceAndTabParse2Test() {
 		String[] result;
-		Graph g = new Graph();
+		final Graph g = new Graph();
 		try {
 			Parser.parse("test2.txt", g);
 			result = Parser.parse2("spaceAndTabTestResult2-1.txt", g);
-			String[] correctResults = {"D", "C", "B", "A"};
-			
+			final String[] correctResults = {"D", "C", "B", "A"};
+
 			for (int i = 0; i < correctResults.length; i++) {
 				assertEquals(correctResults[i], result[i]);
 			}
-		} catch (Exception ex) {
+		} catch (final Exception ex) {
 			fail();
 		}
 	}
-	
+
 }

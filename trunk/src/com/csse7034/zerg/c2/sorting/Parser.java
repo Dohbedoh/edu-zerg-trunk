@@ -27,13 +27,13 @@ public class Parser {
 	 *            The file path
 	 * @return 
 	 */
-	public static void parse(String filePath, GraphI graph)
+	public static void parse(final String filePath, final GraphI graph)
 			throws SorterException {
 
-		String CharFromSet = "[[A-Za-z0-9]|[-\\+@#\\$%\\^&\\*|<>\\?]]*";
+		final String CharFromSet = "[[A-Za-z0-9]|[-\\+@#\\$%\\^&\\*|<>\\?]]*";
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File(
+			final BufferedReader br = new BufferedReader(new FileReader(new File(
 					filePath)));
 
 			String line = "";
@@ -98,7 +98,7 @@ public class Parser {
 							try {
 								graph.addEdge(parentAndChild[0],
 										allTheChildren[i]);
-							} catch (SorterException cge) {
+							} catch (final SorterException cge) {
 								throw cge;
 							}
 
@@ -126,7 +126,7 @@ public class Parser {
 				}
 			}
 			br.close();
-		} catch (IOException ex) {
+		} catch (final IOException ex) {
 			// System.out.println(ex.getStackTrace());
 			// ex.printStackTrace();
 			// return "!01";
@@ -148,7 +148,7 @@ public class Parser {
 	 * @return String[] A String list containing individual nodes
 	 */
 
-	public static String[] parse2(String filePath2, Graph g)
+	public static String[] parse2(final String filePath2, final Graph g)
 			throws SorterException {
 
 		// Initialising Variables
@@ -158,20 +158,20 @@ public class Parser {
 
 		// Count number of lines
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File(
+			final BufferedReader br = new BufferedReader(new FileReader(new File(
 					filePath2)));
 			while ((line = br.readLine()) != null) {
 				size++;
 			}
 			br.close();
-		} catch (IOException ex) {
+		} catch (final IOException ex) {
 			throw new FileInputException(filePath2);
 		}
 
-		String[] compList = new String[size];
+		final String[] compList = new String[size];
 
 		try {
-			BufferedReader br2 = new BufferedReader(new FileReader(new File(
+			final BufferedReader br2 = new BufferedReader(new FileReader(new File(
 					filePath2)));
 			int lineCount2 = 0;
 			int i = 0;
@@ -188,9 +188,9 @@ public class Parser {
 			}
 
 			for (int j = 0; j < compList.length; j++) {
-				String current = compList[j].trim();
+				final String current = compList[j].trim();
 				for (int k = 0; k < compList.length; k++) {
-					String next = compList[k].trim();
+					final String next = compList[k].trim();
 
 					if (k != j) {
 						if (current.equals(next)) {
@@ -201,7 +201,7 @@ public class Parser {
 				}
 			}
 			br2.close();
-		} catch (IOException ex) {
+		} catch (final IOException ex) {
 			// System.out.println(ex.getStackTrace());
 			ex.printStackTrace();
 			throw new FileInputException(filePath2);

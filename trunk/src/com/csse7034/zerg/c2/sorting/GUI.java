@@ -1,8 +1,8 @@
 /**
- * Class UI: Class responsible of running the main method that executes the program,
+ * Class GUI: Class responsible of running the main method that executes the program,
  * it also takes the errors produced by other units and returns an appropriate error message
  * 
- * @author Ding Shen Tan, Pablo MINO
+ * @author Lin SHI
  */
 
 package com.csse7034.zerg.c2.sorting;
@@ -124,8 +124,7 @@ public class GUI extends JFrame{
 		//Add action listener to mode 1 radio button
 		mode1Radio.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e)
+			public void actionPerformed(final ActionEvent e)
 			{
 				mode = 1;
 				mode2Radio.setSelected(false);
@@ -143,8 +142,7 @@ public class GUI extends JFrame{
 		//Add action listener to mode 2 radio button
 		mode2Radio.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e)
+			public void actionPerformed(final ActionEvent e)
 			{
 				mode = 2;
 				mode1Radio.setSelected(false);
@@ -162,10 +160,9 @@ public class GUI extends JFrame{
 		//Add action listener to file select button 1
 		file1Button.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e)
+			public void actionPerformed(final ActionEvent e)
 			{
-				int returnVal = file1Chooser.showOpenDialog(GUI.this);
+				final int returnVal = file1Chooser.showOpenDialog(GUI.this);
 
 				if (returnVal == JFileChooser.APPROVE_OPTION) {
 
@@ -184,10 +181,9 @@ public class GUI extends JFrame{
 		//Add action listener to file select button 2
 		file2Button.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e)
+			public void actionPerformed(final ActionEvent e)
 			{
-				int returnVal = file2Chooser.showOpenDialog(GUI.this);
+				final int returnVal = file2Chooser.showOpenDialog(GUI.this);
 
 				if (returnVal == JFileChooser.APPROVE_OPTION) {
 
@@ -206,8 +202,7 @@ public class GUI extends JFrame{
 		//Add action listener to the run button
 		runButton.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e)
+			public void actionPerformed(final ActionEvent e)
 			{
 				if (mode == 1){
 					String result;
@@ -218,7 +213,7 @@ public class GUI extends JFrame{
 						result += "A Topological Sort possible:\n\n"+Sorter.sort(graph)+"\n";
 						statusTextArea.setBackground(Color.GREEN);
 						appendResult(result);
-					} catch (SorterException ex) {
+					} catch (final SorterException ex) {
 						ex.printStackTrace();
 						result = ex.getMessage();
 						statusTextArea.setBackground(Color.RED);
@@ -241,11 +236,10 @@ public class GUI extends JFrame{
 						result = graph.toString()+"\n";
 						// Field 2 check missing - Fixed by DS
 						if (file2Field.getText().length() > 0) {
-							String[] value = Parser.parse2(file2Field.getText(), graph);
+							final String[] value = Parser.parse2(file2Field.getText(), graph);
 							result += "The topological sort suggested:\n\n";
-							for(int i=0; i<value.length; i++)
-							{
-								result += value[i] + "\n";
+							for (final String element : value) {
+								result += element + "\n";
 							}
 							result += "\nResult: "+((Sorter.compare(graph, value))? "The sequence is valid" : "The sequence is NOT valid");
 
@@ -263,7 +257,7 @@ public class GUI extends JFrame{
 							result = "Both files are required.";
 							statusTextArea.setBackground(Color.RED);
 						}
-					} catch (SorterException ex) {
+					} catch (final SorterException ex) {
 						ex.printStackTrace();
 						result += ex.getMessage();
 						statusTextArea.setBackground(Color.RED);
@@ -277,39 +271,39 @@ public class GUI extends JFrame{
 		runButton.setEnabled(false);
 	}
 
-	private void appendError(String message)
+	private void appendError(final String message)
 	{
 		try { 
-			File file = new File("errorlog.txt");
+			final File file = new File("errorlog.txt");
 			if(!file.exists())
 			{
 				file.createNewFile();
 			}
-			FileWriter outFile = new FileWriter(file, true); 
-			PrintWriter out = new PrintWriter(outFile);
-			Calendar cal = Calendar.getInstance();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
+			final FileWriter outFile = new FileWriter(file, true); 
+			final PrintWriter out = new PrintWriter(outFile);
+			final Calendar cal = Calendar.getInstance();
+			final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
 			out.append("-----------------------------\n"+sdf.format(cal.getTime())+"\n");
 			out.append(message+"\n");
 			out.close(); 
-		} catch (IOException e) { 
+		} catch (final IOException e) { 
 			outputTextArea.setText("Error couldn't be output to text file");
 			statusTextArea.setBackground(Color.RED);
 		} 
 	}
 
-	private void appendResult(String message)
+	private void appendResult(final String message)
 	{
 		try { 
-			File file = new File("resultlog.txt");
+			final File file = new File("resultlog.txt");
 			if(!file.exists())
 			{
 				file.createNewFile();
 			}
-			FileWriter outFile = new FileWriter(file, true); 
-			PrintWriter out = new PrintWriter(outFile);
-			Calendar cal = Calendar.getInstance();
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
+			final FileWriter outFile = new FileWriter(file, true); 
+			final PrintWriter out = new PrintWriter(outFile);
+			final Calendar cal = Calendar.getInstance();
+			final SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd G 'at' hh:mm:ss z");
 			out.append("-----------------------------\n"+sdf.format(cal.getTime())+"\n");
 			out.append(file1Field.getText()+"\n");
 			if(mode == 2)
@@ -318,7 +312,7 @@ public class GUI extends JFrame{
 			}
 			out.append(message+"\n");
 			out.close(); 
-		} catch (IOException e) { 
+		} catch (final IOException e) { 
 			outputTextArea.setText("Error couldn't be output to text file");
 			statusTextArea.setBackground(Color.RED);
 		} 
@@ -329,12 +323,12 @@ public class GUI extends JFrame{
 	 * @param args	Additional parameters required for program execution
 	 * 
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 
 		/** Create the UI
 		 */
 
-		GUI myUI = new GUI();
+		final GUI myUI = new GUI();
 
 	}
 }

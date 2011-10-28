@@ -1,12 +1,12 @@
 /**
- * Class InvalidCharacterException: SorterException extended class, represents Error 04
+ * Class SequenceValueException: SorterException extended class, represents Error 04
  * 
  * @author Pablo MINO
  */
 
 package com.csse7034.zerg.c2.errors;
 
-public class InvalidCharacterException extends SorterException{
+public class SequenceValueException extends SorterException{
 
 	/**
 	 * Serialised number
@@ -19,7 +19,7 @@ public class InvalidCharacterException extends SorterException{
 	 * @param line The line number that produced the error
 	 * @return The message stored within the exception
 	 */
-	public InvalidCharacterException(String filepath ,int line){
+	public SequenceValueException(String filepath ,int line){
 		super();
 		this.errorMessage = "Error 04: The values parsed from the file '"+ filepath +"' does not obey the standard format at line " + line;
 	}

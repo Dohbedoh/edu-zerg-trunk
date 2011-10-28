@@ -17,7 +17,7 @@ import com.csse7034.zerg.c2.sorting.Graph;
 import com.csse7034.zerg.c2.sorting.Parser;
 import com.csse7034.zerg.c2.errors.FileFormatException;
 import com.csse7034.zerg.c2.errors.CyclicGraphException;
-import com.csse7034.zerg.c2.errors.InvalidCharacterException;
+import com.csse7034.zerg.c2.errors.SequenceValueException;
 
 public class ParserTest {
 	
@@ -41,7 +41,7 @@ public class ParserTest {
 		} catch (CyclicGraphException cge) {
 			caughtE = true;
 			fail();
-		} catch (InvalidCharacterException sove) {
+		} catch (SequenceValueException sove) {
 			caughtE = true;
 			fail();
 		} catch (Exception ex) {
@@ -70,7 +70,7 @@ public class ParserTest {
 		Graph g = new Graph();
 		try {
 			Parser.parse("invalidCharacters.txt", g);
-		} catch (InvalidCharacterException sove) {
+		} catch (SequenceValueException sove) {
 			caught = true;
 			assertTrue(true);
 		} catch (FileFormatException fpoe) {

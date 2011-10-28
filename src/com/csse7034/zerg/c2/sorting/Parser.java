@@ -77,7 +77,7 @@ public class Parser {
 						// System.out.println("Failed Here 1 , " +
 						// parentAndChild[0]);
 						// return "!02";
-						throw new InvalidCharacterException(filePath, lineCount1);
+						throw new SequenceValueException(filePath, lineCount1);
 					}
 
 					// get the rest of the value name
@@ -120,7 +120,7 @@ public class Parser {
 							// specification
 							// System.out.println("Failed Here 3");
 							// return "!02";
-							throw new InvalidCharacterException(filePath,
+							throw new SequenceValueException(filePath,
 									lineCount1);
 						}
 					}

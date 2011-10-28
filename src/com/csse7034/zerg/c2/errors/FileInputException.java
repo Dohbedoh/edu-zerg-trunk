@@ -18,9 +18,9 @@ public class FileInputException extends SorterException{
 	 * @param filepath The path of the file that is being read
 	 * @return The message stored within the exception
 	 */
-	public FileInputException(String filepath){
+	public FileInputException(final String filepath){
 		super();
 		this.errorMessage = "Error 01: Cannot open/read the file input: '"+filepath+"'";
 	}
-	
+
 }

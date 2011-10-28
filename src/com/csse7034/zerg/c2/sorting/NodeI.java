@@ -14,13 +14,13 @@ public interface NodeI {
 	 * @return value
 	 */
 	public String getName();
-	
+
 	/**
 	 * Set the text value representing the node
 	 * @param iName	 The node value
 	 */
 	public void setName(String iName);
-	
+
 	/**
 	 * Returns the level the node belongs to, according to the graph
 	 * @return

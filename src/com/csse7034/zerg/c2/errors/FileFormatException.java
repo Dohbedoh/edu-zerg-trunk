@@ -19,7 +19,7 @@ public class FileFormatException extends SorterException{
 	 * @param line The line number that produced the error
 	 * @return The message stored within the exception
 	 */
-	public FileFormatException(String filepath ,int line){
+	public FileFormatException(final String filepath ,final int line){
 		super();
 		this.errorMessage = "Error 03: The line "+ line + " in the input file '" + filepath + "' does not obey the specified format";
 	}

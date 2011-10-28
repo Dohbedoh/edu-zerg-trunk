@@ -20,7 +20,7 @@ public class SorterTest {
 
 	/** Instance of graph for testing purposes */
 	Graph testGraph = new Graph();
-	
+
 	/**
 	 * Loads test values for the graph to be used in all tests
 	 * At this point it is assumed the passed graph is entirely valid
@@ -41,7 +41,7 @@ public class SorterTest {
 	 * Y: Z
 	 */
 	void initializeTest(){
-		
+
 		testGraph.addNode("A");
 		testGraph.addNode("B");
 		testGraph.addNode("C");
@@ -61,32 +61,32 @@ public class SorterTest {
 		testGraph.addNode("Y");
 		testGraph.addNode("Z");
 		try {
-		testGraph.addEdge("A", "B");		
-		testGraph.addEdge("B", "C");		
-		testGraph.addEdge("C", "D");		
-		testGraph.addEdge("D", "E");
-		testGraph.addEdge("D", "F");
-		testGraph.addEdge("D", "H");
-		testGraph.addEdge("D", "Z");		
-		testGraph.addEdge("F", "I");
-		testGraph.addEdge("F", "W");
-		testGraph.addEdge("F", "H");		
-		testGraph.addEdge("H", "I");
-		testGraph.addEdge("H", "J");	
-		testGraph.addEdge("J", "K");
-		testGraph.addEdge("J", "L");		
-		testGraph.addEdge("L", "M");
-		testGraph.addEdge("L", "N");		
-		testGraph.addEdge("N", "Q");		
-		testGraph.addEdge("Q", "W");
-		testGraph.addEdge("Q", "X");
-		testGraph.addEdge("Q", "Y");		
-		testGraph.addEdge("Y", "Z");
-		} catch (Exception ex) {
-			
+			testGraph.addEdge("A", "B");		
+			testGraph.addEdge("B", "C");		
+			testGraph.addEdge("C", "D");		
+			testGraph.addEdge("D", "E");
+			testGraph.addEdge("D", "F");
+			testGraph.addEdge("D", "H");
+			testGraph.addEdge("D", "Z");		
+			testGraph.addEdge("F", "I");
+			testGraph.addEdge("F", "W");
+			testGraph.addEdge("F", "H");		
+			testGraph.addEdge("H", "I");
+			testGraph.addEdge("H", "J");	
+			testGraph.addEdge("J", "K");
+			testGraph.addEdge("J", "L");		
+			testGraph.addEdge("L", "M");
+			testGraph.addEdge("L", "N");		
+			testGraph.addEdge("N", "Q");		
+			testGraph.addEdge("Q", "W");
+			testGraph.addEdge("Q", "X");
+			testGraph.addEdge("Q", "Y");		
+			testGraph.addEdge("Y", "Z");
+		} catch (final Exception ex) {
+
 		}
 	}
-	
+
 	/**
 	 * Sorting test:	 
 	 * 
@@ -97,18 +97,18 @@ public class SorterTest {
 	@Test
 	public void sorting() {
 		initializeTest();
-		String result = Sorter.sort(testGraph);
+		final String result = Sorter.sort(testGraph);
 		assertEquals(result, "Z\nY\nX\nW\nQ\nN\nM\nL\nK\nJ" +
 				"\nI\nH\nF\nE\nD\nC\nB\nA\n");
 		System.out.println(result);
 	}
-	
+
 	/**
 	 * Compare test
 	 */
 	@Test
 	public void testCompare (){
-		Graph g = new Graph();
+		final Graph g = new Graph();
 		String[] s;
 		boolean result = false;
 		try {
@@ -121,28 +121,28 @@ public class SorterTest {
 			result = Sorter.compare(g, s);
 			assertTrue(result);
 			System.out.println(result);
-			
-			
+
+
 			s = Parser.parse2("testResult2Incorrect3.txt", g);
 			result = Sorter.compare(g, s);
 			System.out.println(result);
 			assertFalse(result);
-			
+
 			s = Parser.parse2("testResult2Incorrect2.txt", g);
 			result = Sorter.compare(g, s);
 			System.out.println(result);
 			assertFalse(result);
-			
+
 			s = Parser.parse2("testResult2Incorrect.txt", g);
 			result = Sorter.compare(g, s);
 			System.out.println(result);
 			assertFalse(result);
-			
-		} catch (Exception ex) {
+
+		} catch (final Exception ex) {
 			//assertEquals(ex.getMessage(), "Values in file 2 and file 1 do not match");
 			ex.printStackTrace();
 		}
-		
+
 	}
-	
+
 }

@@ -15,9 +15,9 @@ import org.junit.Test;
 
 import com.csse7034.zerg.c2.sorting.Graph;
 import com.csse7034.zerg.c2.sorting.Parser;
-import com.csse7034.zerg.c2.errors.IncorrectFileFormatException;
+import com.csse7034.zerg.c2.errors.FileFormatException;
 import com.csse7034.zerg.c2.errors.CyclicGraphException;
-import com.csse7034.zerg.c2.errors.SequenceOfValuesException;
+import com.csse7034.zerg.c2.errors.InvalidCharacterException;
 
 public class ParserTest {
 	
@@ -35,13 +35,13 @@ public class ParserTest {
 		boolean caughtE = false;
 		try {
 			Parser.parse("normalFlow.txt", g);
-		} catch (IncorrectFileFormatException fpoe) {
+		} catch (FileFormatException fpoe) {
 			caughtE = true;
 			fail();
 		} catch (CyclicGraphException cge) {
 			caughtE = true;
 			fail();
-		} catch (SequenceOfValuesException sove) {
+		} catch (InvalidCharacterException sove) {
 			caughtE = true;
 			fail();
 		} catch (Exception ex) {
@@ -70,10 +70,10 @@ public class ParserTest {
 		Graph g = new Graph();
 		try {
 			Parser.parse("invalidCharacters.txt", g);
-		} catch (SequenceOfValuesException sove) {
+		} catch (InvalidCharacterException sove) {
 			caught = true;
 			assertTrue(true);
-		} catch (IncorrectFileFormatException fpoe) {
+		} catch (FileFormatException fpoe) {
 			caught = true;
 			assertTrue(true);
 		} catch (Exception ex) {

@@ -134,3 +134,9 @@ X(10):
 Y(10): 
 
 Graph Error: Node 'Error !01: File was not found on the specified location' does not exist in the Graph
+-----------------------------
+2011.10.28 AD at 10:27:43 EST
+Graph Error: The suggested finite partial order contains a cyclic reference
+-----------------------------
+2011.10.28 AD at 11:04:23 EST
+Error 03: The line 1 in the input file 'C:\Documents and Settings\s4244963\My Documents\checklist.docx' does not obey the specified format

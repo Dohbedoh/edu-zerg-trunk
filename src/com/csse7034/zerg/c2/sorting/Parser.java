@@ -8,8 +8,6 @@
 package com.csse7034.zerg.c2.sorting;
 
 import java.io.*;
-import java.util.*;
-
 import com.csse7034.zerg.c2.errors.*;
 
 public class Parser {

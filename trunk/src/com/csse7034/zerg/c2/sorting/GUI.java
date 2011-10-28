@@ -9,14 +9,12 @@ package com.csse7034.zerg.c2.sorting;
 
 import java.awt.*; 
 import java.awt.event.*; 
-import java.awt.geom.Ellipse2D;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 import javax.swing.*;
 
@@ -126,6 +124,7 @@ public class GUI extends JFrame{
 		//Add action listener to mode 1 radio button
 		mode1Radio.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				mode = 1;
@@ -144,6 +143,7 @@ public class GUI extends JFrame{
 		//Add action listener to mode 2 radio button
 		mode2Radio.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				mode = 2;
@@ -162,6 +162,7 @@ public class GUI extends JFrame{
 		//Add action listener to file select button 1
 		file1Button.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				int returnVal = file1Chooser.showOpenDialog(GUI.this);
@@ -169,7 +170,6 @@ public class GUI extends JFrame{
 				if (returnVal == JFileChooser.APPROVE_OPTION) {
 
 					file1Field.setText(file1Chooser.getSelectedFile().getAbsolutePath());
-					System.out.println("You choose file " + file1Chooser.getSelectedFile().getAbsolutePath());
 
 					if(mode == 2 && file2Field.getText().length()==0)
 					{
@@ -184,6 +184,7 @@ public class GUI extends JFrame{
 		//Add action listener to file select button 2
 		file2Button.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				int returnVal = file2Chooser.showOpenDialog(GUI.this);
@@ -191,7 +192,6 @@ public class GUI extends JFrame{
 				if (returnVal == JFileChooser.APPROVE_OPTION) {
 
 					file2Field.setText(file2Chooser.getSelectedFile().getAbsolutePath());
-					System.out.println("You choose file " + file2Chooser.getSelectedFile().getAbsolutePath());
 
 					if(file1Field.getText().length()==0)
 					{
@@ -206,10 +206,10 @@ public class GUI extends JFrame{
 		//Add action listener to the run button
 		runButton.addActionListener(new ActionListener() {
 
+			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				if (mode == 1){
-					System.out.println("You clicked run!");
 					String result;
 					try {
 						graph.emptyGraph();
@@ -277,8 +277,6 @@ public class GUI extends JFrame{
 		runButton.setEnabled(false);
 	}
 
-	/* BEGIN Allan */ // O-kay.
-
 	private void appendError(String message)
 	{
 		try { 
@@ -287,7 +285,6 @@ public class GUI extends JFrame{
 			{
 				file.createNewFile();
 			}
-			System.out.println(file.getPath());
 			FileWriter outFile = new FileWriter(file, true); 
 			PrintWriter out = new PrintWriter(outFile);
 			Calendar cal = Calendar.getInstance();
@@ -309,7 +306,6 @@ public class GUI extends JFrame{
 			{
 				file.createNewFile();
 			}
-			System.out.println(file.getPath());
 			FileWriter outFile = new FileWriter(file, true); 
 			PrintWriter out = new PrintWriter(outFile);
 			Calendar cal = Calendar.getInstance();
@@ -327,8 +323,6 @@ public class GUI extends JFrame{
 			statusTextArea.setBackground(Color.RED);
 		} 
 	}
-
-	/* Allan END*/
 
 	/**
 	 * main Java method which executes with the program call

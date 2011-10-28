@@ -310,6 +310,7 @@ public class Graph implements GraphI{
 	 * Return a String representation of the graph
 	 * @return		A String representation of the Graph
 	 */
+	@Override
 	public String toString()
 	{
 		StringBuffer buffer = new StringBuffer("Graph Representation:\n\n");

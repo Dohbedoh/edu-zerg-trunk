@@ -16,7 +16,6 @@ import org.junit.Test;
 import com.csse7034.zerg.c2.errors.CyclicGraphException;
 import com.csse7034.zerg.c2.sorting.Graph;
 import com.csse7034.zerg.c2.sorting.GraphI;
-import com.csse7034.zerg.c2.sorting.Node;
 import com.csse7034.zerg.c2.sorting.NodeI;
 
 public class GraphTest {
